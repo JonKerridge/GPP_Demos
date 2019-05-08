@@ -8,4 +8,5 @@ String rootPath = "./VisLogDemos/"  // as required for use in Intellij
 build.runBuilder(rootPath + "Test20Log")
 build.runBuilder(rootPath + "Test21Log")
 build.runBuilder(rootPath + "Test23Log")
+build.runBuilder(rootPath + "Test24aLog")
 
