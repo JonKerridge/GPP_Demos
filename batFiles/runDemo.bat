@@ -8,6 +8,6 @@ rem %3 is the file to which the csv style output will be written in the folder D
 cd ..
 for %%A in (1 2 3 4 5 6 7 8 9 10 ) do (
 echo run %%A of %1 %2 to %3 args %4 %5 %6 %7 %8
-java -jar .\out\artifacts\gppDemos_jar\gppDemos.jar .\src\main\groovy\gppDemos\%1\%2.groovy %1 %4 %5 %6 %7 %8 >>  .\csvFiles\%3.csv) 2> .\csvFiles\%3.err
+java -jar .\out\artifacts\GPP_Demos_jar\GPP_Demos.jar .\src\main\groovy\GPP_Demos\%1\%2.groovy %1 %4 %5 %6 %7 %8 >>  .\csvFiles\%3.csv) 2> .\csvFiles\%3.err
 cd batFiles
 
