@@ -1,0 +1,25 @@
+call runDemo concordance RunGoPConcordanceLog concordanceLog 4 bible 8 1
+call runDemo concordance RunGoPConcordanceLog concordanceLog 4 bible 16 2
+call runDemo concordance RunGoPConcordanceLog concordanceLog 4 bible 32 3
+call runDemo concordance RunGoPConcordanceLog concordanceLog 8 bible 8 4
+call runDemo concordance RunGoPConcordanceLog concordanceLog 8 bible 16 5
+call runDemo concordance RunGoPConcordanceLog concordanceLog 8 bible 32 6
+call runDemo concordance RunGoPConcordanceLog concordanceLog 16 bible 8 7
+call runDemo concordance RunGoPConcordanceLog concordanceLog 16 bible 16 8
+call runDemo concordance RunGoPConcordanceLog concordanceLog 16 bible 32 9
+call runDemo concordance RunGoPConcordanceLog concordanceLog 32 bible 8 10
+call runDemo concordance RunGoPConcordanceLog concordanceLog 32 bible 16 11
+call runDemo concordance RunGoPConcordanceLog concordanceLog 32 bible 32 12
+
+call runDemo concordance RunExtendedConcordanceVisLog concordanceLog 4 bible 8 1
+call runDemo concordance RunExtendedConcordanceVisLog concordanceLog 4 bible 16 2
+call runDemo concordance RunExtendedConcordanceVisLog concordanceLog 4 bible 32 3
+call runDemo concordance RunExtendedConcordanceVisLog concordanceLog 8 bible 8 4
+call runDemo concordance RunExtendedConcordanceVisLog concordanceLog 8 bible 16 5
+call runDemo concordance RunExtendedConcordanceVisLog concordanceLog 8 bible 32 6
+call runDemo concordance RunExtendedConcordanceVisLog concordanceLog 16 bible 8 7
+call runDemo concordance RunExtendedConcordanceVisLog concordanceLog 16 bible 16 8
+call runDemo concordance RunExtendedConcordanceVisLog concordanceLog 16 bible 32 9
+call runDemo concordance RunExtendedConcordanceVisLog concordanceLog 32 bible 8 10
+call runDemo concordance RunExtendedConcordanceVisLog concordanceLog 32 bible 16 11
+call runDemo concordance RunExtendedConcordanceVisLog concordanceLog 32 bible 32 12

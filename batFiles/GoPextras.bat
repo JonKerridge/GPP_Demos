@@ -1,0 +1,9 @@
+call runDemo concordance RunGoPConcordance GoPExtras 64 bible 8
+call runDemo concordance RunGoPConcordance GoPExtras 64 2bibles 8
+call runDemo concordance RunGoPConcordance GoPExtras 64 4bibles 8
+call runDemo concordance RunGoPConcordance GoPExtras 64 bible 16
+call runDemo concordance RunGoPConcordance GoPExtras 64 2bibles 16
+call runDemo concordance RunGoPConcordance GoPExtras 64 4bibles 16
+call runDemo concordance RunGoPConcordance GoPExtras 64 bible 32
+call runDemo concordance RunGoPConcordance GoPExtras 64 2bibles 32
+call runDemo concordance RunGoPConcordance GoPExtras 64 4bibles 32
