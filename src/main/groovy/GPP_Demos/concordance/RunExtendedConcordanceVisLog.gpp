@@ -6,7 +6,7 @@ import GPP_Library.ResultDetails
 import GPP_Library.connectors.reducers.ListMergeOne
 import GPP_Library.connectors.spreaders.OneFanAny
 import GPP_Library.connectors.spreaders.OneFanList
-import GPP_Library.functionals.composites.GroupOfPipelineCollects
+import GPP_Library.functionals.composites.AnyGroupOfPipelineCollects
 import GPP_Library.functionals.groups.ListGroupList
 import GPP_Library.terminals.*
 import GPP_Library.functionals.transformers.CombineNto1
@@ -112,7 +112,7 @@ def emitInstances = new EmitFromInput( eDetails: outData,
 
 def fanOut = new OneFanAny( destinations: pogWorkers)
 
-def poG = new GroupOfPipelineCollects( stages: 3,
+def poG = new AnyGroupOfPipelineCollects( stages: 3,
                 rDetails: resultDetails,
                 stageOp: [cd.valueList, cd.indicesMap, cd.wordsMap],
                 groups: pogWorkers,

@@ -3,7 +3,7 @@ package GPP_Demos.concordance
 import GPP_Library.DataDetails
 import GPP_Library.ResultDetails
 import GPP_Library.connectors.spreaders.OneFanAny
-import GPP_Library.functionals.composites.GroupOfPipelineCollects
+import GPP_Library.functionals.composites.AnyGroupOfPipelineCollects
 import GPP_Library.terminals.Emit
 
 import GPP_Demos.concordance.ConcordanceData as cd
@@ -67,7 +67,7 @@ def emitter = new Emit( eDetails: dDetails)
 
 def fanOut = new OneFanAny(destinations: groups)
 
-def GoPconcordance = new GroupOfPipelineCollects( stages: 3,
+def GoPconcordance = new AnyGroupOfPipelineCollects( stages: 3,
                      rDetails: resultDetails,
                      stageOp: [cd.valueList, cd.indicesMap, cd.wordsMap],
                      groups: groups)

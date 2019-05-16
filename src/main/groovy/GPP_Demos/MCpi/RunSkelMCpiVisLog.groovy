@@ -65,9 +65,9 @@ def logVis = new LoggingVisualiser ( logInput: logChan.in(),
 new Thread() {
 	@Override
 	public void run() {
-		Visualiser.main();
+		Visualiser.main() 
 	}
-}.start();
+}.start() 
  
 
 //NETWORK
@@ -85,7 +85,7 @@ def emit = new Emit (
     logPropertyName: "instance")
 
     //gppVis command
-    Visualiser.hb.getChildren().add(Visualiser.p.addWorker("0-emit"));
+    Visualiser.hb.getChildren().add(Visualiser.p.addWorker("0-emit")) 
  
 def ofa = new OneFanAny (
     input: chan1.in(),
@@ -93,7 +93,7 @@ def ofa = new OneFanAny (
     destinations: workers)
 
     //gppVis command
-    Visualiser.hb.getChildren().add(new Connector(Connector.TYPE.SPREADER));
+    Visualiser.hb.getChildren().add(new Connector(Connector.TYPE.SPREADER)) 
  
 def group = new AnyGroupAny (
     inputAny: chan2.in(),
@@ -104,7 +104,7 @@ def group = new AnyGroupAny (
     logPropertyName: "instance" )
 
     //gppVis command
-    Visualiser.hb.getChildren().add(Visualiser.p.addGroup(workers, "1-split" ));
+    Visualiser.hb.getChildren().add(Visualiser.p.addGroup(workers, "1-split" )) 
  
 def afo = new AnyFanOne (
     inputAny: chan3.in(),
@@ -112,7 +112,7 @@ def afo = new AnyFanOne (
     sources: workers)
 
     //gppVis command
-    Visualiser.hb.getChildren().add(new Connector(Connector.TYPE.REDUCER));
+    Visualiser.hb.getChildren().add(new Connector(Connector.TYPE.REDUCER)) 
  
 def collector = new Collect (
     input: chan4.in(),
@@ -123,7 +123,7 @@ def collector = new Collect (
     logPropertyName: "instance" )
 
     //gppVis command
-    Visualiser.hb.getChildren().add(Visualiser.p.addWorker("1-value"));
+    Visualiser.hb.getChildren().add(Visualiser.p.addWorker("1-value")) 
 
 //gppVis command
 //short delay to give JavaFx time to start up.
@@ -133,10 +133,10 @@ Platform.runLater(new Runnable() {
 	void run() {
 		Visualiser.networkScene()
 	}
-});
+}) 
 
 //short delay to give JavaFx time to display.
-sleep(3000);
+sleep(3000) 
 
 PAR network = new PAR()
  network = new PAR([logVis, emit , ofa , group , afo , collector ])
@@ -152,7 +152,7 @@ Platform.runLater(new Runnable() {
 	void run() {
 		Visualiser.readLog("./LogFile-2-log.csv")
 	}
-});
+}) 
  
 def endtime = System.currentTimeMillis()
 println " ${endtime - startime} "

@@ -46,12 +46,16 @@ def dDetails = new DataDetails( dName: cd.getName(),
   dCreateMethod: cd.create,
   dCreateData: [null])
 
-def rDetails = new ResultDetails( rName: cr.getName(),
-    rInitMethod: cr.init,
-    rInitData: [minSeqLen, doFileOutput],
-    rCollectMethod: cr.collector,
-    rFinaliseMethod: cr.finalise,
-    rFinaliseData: [null])
+def resultDetails = []
+
+for ( i in 0 ..< collectors) {
+    resultDetails << new ResultDetails( rName: cr.getName(),
+        rInitMethod: cr.init,
+        rInitData: [minSeqLen, doFileOutput],
+        rCollectMethod: cr.collector,
+        rFinaliseMethod: cr.finalise,
+        rFinaliseData: [null])
+}
 
 
 System.gc()
@@ -67,7 +71,7 @@ def pipe = new OnePipelineOne(stages : 3,
 
 def ofa = new OneFanAny(destinations: collectors)
 
-def collectGroup  = new AnyGroupCollect(rDetails: rDetails,
+def collectGroup  = new AnyGroupCollect(rDetails: resultDetails,
                         collectors: collectors)
 
 def endtime = System.currentTimeMillis()
