@@ -51,7 +51,11 @@ def rDetails = new ResultDetails(rName: jr.getName(),
                  rCollectMethod: jr.collector,
                  rFinaliseMethod: jr.finalise)
 
-def emit = new Emit( eDetails: eDetails)
+//@log 1 "./Jacobi-"
+
+def emit = new Emit( eDetails: eDetails,
+                logPropertyName: "iterations",
+                logPhaseName: "emit")
 
 def mcEngine = new MultiCoreEngine (nodes: nodes,
                 errorMargin: margin,
@@ -59,10 +63,12 @@ def mcEngine = new MultiCoreEngine (nodes: nodes,
                 partitionMethod: jd.partitionMethod,
                 calculationMethod: jd.calculationMethod,
                 errorMethod: jd.errorMethod,
-                updateMethod: jd.updateMethod )
+                updateMethod: jd.updateMethod,
+                logPropertyName: "iterations")
 
-def collector = new Collect(rDetails: rDetails)
-
+def collector = new Collect(rDetails: rDetails,
+                logPropertyName: "iterations",
+                logPhaseName: "collect" )
 
 long endTime = System.currentTimeMillis()
 println " ${endTime - startTime}"

@@ -42,7 +42,7 @@ fileName = workingDirectory + "/src/main/groovy/GPP_Demos/${folder}/${title}.txt
 double margin = 1.0E-16
  
 System.gc()
-print "ParJacobi, $title, $nodes, "
+print "ParJacobi, $nodes, "
 long startTime = System.currentTimeMillis()
  
 def eDetails = new DataDetails (dName: jd.getName(),

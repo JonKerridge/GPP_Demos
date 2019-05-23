@@ -1,11 +1,12 @@
 package GPP_Demos.nbody
 
+import GPP_Library.DataClass
 import groovy.transform.CompileStatic
 import GPP_Library.DataClassInterface as constants
 import GPP_Library.functionals.matrix.Matrix
 
 @CompileStatic
-class NbodyData extends GPP_Library.DataClass {
+class NbodyData extends DataClass {
 
 // based on code from http://physics.princeton.edu/~fpretori/Nbody/code.htm
     
@@ -14,7 +15,7 @@ class NbodyData extends GPP_Library.DataClass {
     Matrix planets = null
     static int N = 0
     static double dt = 1e11
-
+    int reps = 0
     static String initMethod = "init"
     static String createMethod = "create"
     static String partitionMethod = "partition"
@@ -46,7 +47,7 @@ class NbodyData extends GPP_Library.DataClass {
   static final int fy = 7
 
   int create(List d){ // d is null
-     if (inputComplete) return constants.normalTermination
+     if (inputComplete) return normalTermination
      else {
          inputComplete = true   //we only read one file
          planets = new Matrix( rows: N, columns: 8)
@@ -59,7 +60,7 @@ class NbodyData extends GPP_Library.DataClass {
                  planets.entries[r][c] = Double.parseDouble(tokens[c])
          } // for each row
          reader.close()
-         return constants.normalContinuation
+         return normalContinuation
      }
   }// create
 
@@ -105,6 +106,7 @@ class NbodyData extends GPP_Library.DataClass {
 //            if ( p != r) addForce (r, p)
 //        }
     }
+    reps += 1
   }
 
   void update (){

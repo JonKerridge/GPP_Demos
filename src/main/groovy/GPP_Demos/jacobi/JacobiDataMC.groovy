@@ -1,12 +1,12 @@
 package GPP_Demos.jacobi
 
+import GPP_Library.DataClass
 import groovy.transform.CompileStatic
-import GPP_Library.DataClassInterface as Constants
 import GPP_Library.functionals.matrix.Matrix
 import GPP_Library.functionals.matrix.Vector
 
 @CompileStatic
-class JacobiDataMC extends GPP_Library.DataClass {
+class JacobiDataMC extends DataClass {
 
   Matrix M = null
   Vector solution = null
@@ -34,7 +34,7 @@ class JacobiDataMC extends GPP_Library.DataClass {
     dataIdentifier = reader.readLine()
     dataSets = Integer.parseInt(reader.readLine())
     //println """Processing file ${d[0]} containing $dataIdentifier  comprising $dataSets datasets\n"""
-    return Constants.completedOK
+    return completedOK
   } // init
 
   static int currentDataSet = 0
@@ -42,7 +42,7 @@ class JacobiDataMC extends GPP_Library.DataClass {
 
   int create(List d){ // d is null
 
-    if ( currentDataSet == dataSets) return Constants.normalTermination
+    if ( currentDataSet == dataSets) return normalTermination
     else {
       currentDataSet = currentDataSet + 1
       thisDataSet = currentDataSet
@@ -72,7 +72,7 @@ class JacobiDataMC extends GPP_Library.DataClass {
         M.entries[r][n+2] = Double.parseDouble(tokens[n+2][0 .. tokens[n+2].size()-2])
       }
     }
-    return Constants.normalContinuation
+    return normalContinuation
   } // create
 
     void partition (int nodes) {
@@ -103,10 +103,7 @@ class JacobiDataMC extends GPP_Library.DataClass {
         checked = Double.compare(difference, (double)margin)
       i = i + 1
     } // i while
-    if ( checked >= 0 )
-      return true   // need another iteration
-    else
-      return false  // no more iterations required
+    return (checked >= 0)
   }
 
   void update (){
