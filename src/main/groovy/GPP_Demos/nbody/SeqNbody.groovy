@@ -9,19 +9,19 @@ double dt = 1e11
 String readPath, writePath
 
 if (args.size() == 0){
-    // assumed to be running form within Intellij
-    N = 128
-    readPath = "./planets_list.txt"
-    writePath = "./${N}_planets_Seq.txt"
-    iterations = 100
+  // assumed to be running form within Intellij
+  N = 128
+  readPath = "./planets_list.txt"
+  writePath = "./${N}_planets_Seq.txt"
+  iterations = 100
 }
 else {
-    // assumed to be running via runDemo
-    String folder = args[0]
-    N = Integer.parseInt(args[1])
-    iterations  = Integer.parseInt(args[2])
-    writePath = workingDirectory + "/src/main/groovy/GPP_Demos/${folder}/${N}_planets_Seq.txt"
-    readPath = workingDirectory + "/src/main/groovy/GPP_Demos/${folder}/planets_list.txt"
+  // assumed to be running via runDemo
+  String folder = args[0]
+  N = Integer.parseInt(args[1])
+  iterations  = Integer.parseInt(args[2])
+  writePath = workingDirectory + "/src/main/groovy/GPP_Demos/${folder}/${N}_planets_Seq.txt"
+  readPath = workingDirectory + "/src/main/groovy/GPP_Demos/${folder}/planets_list.txt"
 }
 
 System.gc()
@@ -40,8 +40,8 @@ planets.&"${planets.partitionMethod}"(1)
 // now simulate the iterations
 
 for ( i in 0 ..< iterations){
-    planets.&"${planets.calculationMethod}"(0)
-    planets.&"${planets.updateMethod}"()
+  planets.&"${planets.calculationMethod}"(0)
+  planets.&"${planets.updateMethod}"()
 }
 
 // now collect the results

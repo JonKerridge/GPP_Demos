@@ -4,9 +4,9 @@ import GPP_Demos.concordance.ConcordanceData as cd
 import GPP_Demos.concordance.ConcordanceResults as cr
 import GPP_Library.DataDetails
 import GPP_Library.ResultDetails
-import GPP_Library.patterns.TaskParallelPattern
+import GPP_Library.patterns.PipelineOfGroupsPattern
 
-//usage runDemo concordance RunConcordancePoG resultFile workers title N
+//usage runDemo concordance PoG resultFile workers title N
 
 int workers
 String title
@@ -19,7 +19,7 @@ String outFileName
 
 if (args.size() == 0) {
   // assumed to be running form within Intellij
-  workers = 4
+  workers = 2
   title = "bible"
   N = 8
   fileName = "./${title}.txt"
@@ -55,9 +55,9 @@ System.gc()
 print "PoG, $doFileOutput, $title, $workers, $N, "
 def startime = System.currentTimeMillis()
 
-def concordancePoG = new TaskParallelPattern(
+def concordancePoG = new PipelineOfGroupsPattern(
     eDetails: dDetails,
-    rDetails: resultDetails,
+    rDetails: rDetails,
     stages: 3,
     stageOp: [cd.valueList, cd.indicesMap, cd.wordsMap],
     workers: workers,

@@ -22,29 +22,29 @@ String fileName
 String outFileName
 
 if (args.size() == 0){
-    // assumed to be running form within Intellij
-    groups = 4
-    title = "bible"
-    N = 8
-    fileName = "./${title}.txt"
-    outFileName = "./${title}GoP"
+  // assumed to be running form within Intellij
+  groups = 4
+  title = "bible"
+  N = 8
+  fileName = "./${title}.txt"
+  outFileName = "./${title}GoP"
 }
 else {
-    // assumed to be running via runDemo
-    String folder = args[0]
-    title = args[2]
-    fileName = workingDirectory + "/src/main/groovy/GPP_Demos/${folder}/${title}.txt"
-    outFileName = workingDirectory + "/src/main/groovy/GPP_Demos/${folder}/${title}GoP"
-    groups = Integer.parseInt(args[1])
-    N = Integer.parseInt(args[3])
+  // assumed to be running via runDemo
+  String folder = args[0]
+  title = args[2]
+  fileName = workingDirectory + "/src/main/groovy/GPP_Demos/${folder}/${title}.txt"
+  outFileName = workingDirectory + "/src/main/groovy/GPP_Demos/${folder}/${title}GoP"
+  groups = Integer.parseInt(args[1])
+  N = Integer.parseInt(args[3])
 }
 
 
 def dDetails = new DataDetails( dName: cd.getName(),
-  dInitMethod: cd.init,
-  dInitData: [N, fileName, outFileName],
-  dCreateMethod: cd.create,
-  dCreateData: [null])
+    dInitMethod: cd.init,
+    dInitData: [N, fileName, outFileName],
+    dCreateMethod: cd.create,
+    dCreateData: [null])
 
 def rDetails = new ResultDetails( rName: cr.getName(),
     rInitMethod: cr.init,
@@ -68,9 +68,9 @@ def emitter = new Emit( eDetails: dDetails)
 def fanOut = new OneFanAny(destinations: groups)
 
 def GoPconcordance = new AnyGroupOfPipelineCollects( stages: 3,
-                     rDetails: resultDetails,
-                     stageOp: [cd.valueList, cd.indicesMap, cd.wordsMap],
-                     groups: groups)
+    rDetails: resultDetails,
+    stageOp: [cd.valueList, cd.indicesMap, cd.wordsMap],
+    groups: groups)
 
 
 def endtime = System.currentTimeMillis()

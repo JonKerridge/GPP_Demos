@@ -4,12 +4,12 @@ import GPP_Library.DataDetails
 import GPP_Library.GroupDetails
 import GPP_Library.LocalDetails
 import GPP_Library.ResultDetails
-import GPP_Library.patterns.DataParallelCollect
+import GPP_Library.patterns.DataParallelPattern
 import GPP_Demos.MCpi.MCpiPartData as piPartData
 import GPP_Demos.MCpi.MCpiPartResults as piPartResults
 import GPP_Demos.MCpi.MCpiPartWorker as piPartWorker
 
-//usage runDemo MCpi RunMCpiWorkerDPCPattern resultsFile workers instances iterations
+//usage runDemo MCpi RunMCpiWorkerDataParallel resultsFile workers instances iterations
 
 int workers
 int instances
@@ -27,7 +27,7 @@ else {
     iterations = Integer.parseInt(args[3])
 }
 
-print "Run MCpi Worker DPC Pattern $workers, $instances, $iterations, "
+print "Run MCpi Worker Data Parallel $workers, $instances, $iterations, "
 System.gc()
 def startime = System.currentTimeMillis()
 
@@ -52,7 +52,7 @@ GroupDetails localGroup = new GroupDetails(	workers: workers,
 
 for ( w in 0 ..< workers) localGroup.groupDetails[w] = mcpiWorker
 
-def farming = new DataParallelCollect (
+def farming = new DataParallelPattern (
           eDetails: emitData,
           gDetails: localGroup,
           rDetails: resultDetails,

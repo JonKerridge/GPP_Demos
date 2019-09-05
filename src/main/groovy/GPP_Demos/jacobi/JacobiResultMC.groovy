@@ -1,11 +1,11 @@
 package GPP_Demos.jacobi
 
+import GPP_Library.DataClass
 import groovy.transform.CompileStatic
 
 @CompileStatic
-class JacobiResultMC extends GPP_Library.DataClass {
+class JacobiResultMC extends DataClass {
 
-  List results = []
   static String init = "initClass"
   static String collector = "collector"
   static String finalise = "finalise"
@@ -15,18 +15,19 @@ class JacobiResultMC extends GPP_Library.DataClass {
     return completedOK
   }
 
+  def solutionValues = null
+
   int collector(JacobiDataMC d) {
     String s = "$d.dataSetName, $d.n x $d.n, $d.iterations, "
-    def solutionValues = d.M.getByColumn(d.n + 1)
+    solutionValues = d.M.getByColumn(d.n + 1)
     def preSolution = d.solution.getEntries()
     if (solutionValues == preSolution) s = s + "OK" else s = s + "Not OK"
-    results << s
-    print "$s, "
+    println "$s, "
     return completedOK
   }
 
   int finalise(List d) {
-    //results.each {println "$it"}  // for timing purposes removed
+    //solutionValues.each {println "$it"}  // for timing purposes removed
     return completedOK
   }
 

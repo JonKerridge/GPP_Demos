@@ -29,7 +29,7 @@ String fileName
  
 if (args.size() == 0){
 nodes = 4
-title = "Jacobi1024"
+title = "Jacobi32"
 fileName = "./${title}.txt"
 }
 else {

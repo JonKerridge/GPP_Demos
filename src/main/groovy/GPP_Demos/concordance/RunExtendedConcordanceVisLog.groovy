@@ -150,7 +150,7 @@ def group = new ListGroupList(
     logPropertyName: "bufferInstance")
 
     //gppVis command
-    Visualiser.hb.getChildren().add(Visualiser.p.addGroup(blockWorkers, "split" )) 
+    Visualiser.hb.getChildren().add(Visualiser.p.addGroup(blockWorkers, "split")) 
  
 def fis = new ListMergeOne(
     inputList: chan3InList,
@@ -212,7 +212,7 @@ sleep(2000)
 Platform.runLater(new Runnable() {
 	@Override
 	void run() {
-		Visualiser.networkScene()
+		Visualiser.networkScene("./LogFileExt-1-")
 	}
 }) 
 

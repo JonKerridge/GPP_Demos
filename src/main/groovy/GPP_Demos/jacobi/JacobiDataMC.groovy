@@ -8,8 +8,8 @@ import GPP_Library.functionals.matrix.Vector
 @CompileStatic
 class JacobiDataMC extends DataClass {
 
-  Matrix M = null
-  Vector solution = null
+  Matrix M = null         // imported from GPP_Library.functionals.matrix.Matrix
+  Vector solution = null  // as above
   static String initMethod = "init"
   static String createMethod = "create"
   static String partitionMethod = "partition"

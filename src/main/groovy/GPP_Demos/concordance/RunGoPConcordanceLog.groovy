@@ -132,7 +132,7 @@ sleep(2000)
 Platform.runLater(new Runnable() {
 	@Override
 	void run() {
-		Visualiser.networkScene()
+		Visualiser.networkScene("./GPPLogs/LogFile-2-")
 	}
 }) 
 

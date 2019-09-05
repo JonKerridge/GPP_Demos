@@ -22,8 +22,8 @@ class NbodyData extends DataClass {
     static String calculationMethod = "doCalculation"
     static String updateMethod = "update"
 
-    static BufferedReader reader = null           // the file reader that will used to read the data file
-    List <Range> partitionRanges = [] // a list of 'nodes' partition ranges
+    static BufferedReader reader = null   // the file reader that will used to read the data file
+    List <Range> partitionRanges = []     // a list of 'nodes' partition ranges
 
   int init(List d) {  // [filename, N, dt ]
     File file = new File((String)d[0])

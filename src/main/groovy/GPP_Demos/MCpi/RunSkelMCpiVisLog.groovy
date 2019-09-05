@@ -104,7 +104,7 @@ def group = new AnyGroupAny (
     logPropertyName: "instance" )
 
     //gppVis command
-    Visualiser.hb.getChildren().add(Visualiser.p.addGroup(workers, "1-split" )) 
+    Visualiser.hb.getChildren().add(Visualiser.p.addGroup(workers, "1-split")) 
  
 def afo = new AnyFanOne (
     inputAny: chan3.in(),
@@ -131,7 +131,7 @@ sleep(2000)
 Platform.runLater(new Runnable() {
 	@Override
 	void run() {
-		Visualiser.networkScene()
+		Visualiser.networkScene("./LogFile-2-")
 	}
 }) 
 

@@ -4,9 +4,9 @@ import GPP_Demos.MCpi.MCpiData as piData
 import GPP_Demos.MCpi.MCpiResults as piResults
 import GPP_Library.DataDetails
 import GPP_Library.ResultDetails
-import GPP_Library.patterns.DataParallelCollect
+import GPP_Library.patterns.DataParallelPattern
 
-//usage runDemo MCpi RunMCpiDPCPattern resultsFile workers instances iterations
+//usage runDemo MCpi RunMCpiDataParallel resultsFile workers instances iterations
 
 int workers
 int instances
@@ -24,7 +24,7 @@ if (args.size() == 0) {
 }
 
 System.gc()
-print "MCpi DPC pattern, $workers, $instances, $iterations, "
+print "MCpi Data Parallel, $workers, $instances, $iterations, "
 def startime = System.currentTimeMillis()
 
 
@@ -41,7 +41,7 @@ def resultDetails = new ResultDetails(
     rCollectMethod: piResults.collector,
     rFinaliseMethod: piResults.finalise)
 
-def piFarm = new DataParallelCollect(
+def piFarm = new DataParallelPattern(
     eDetails: emitData,
     rDetails: resultDetails,
     workers: workers,

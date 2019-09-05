@@ -3,12 +3,11 @@ package GPP_Demos.concordance
 import jcsp.lang.*
 import groovyJCSP.*
  
-import GPP_Library.DataDetails
-import GPP_Library.ResultDetails
-import GPP_Library.patterns.TaskParallelOfGroupCollects
 import GPP_Demos.concordance.ConcordanceData as cd
 import GPP_Demos.concordance.ConcordanceResults as cr
- 
+import GPP_Library.DataDetails
+import GPP_Library.ResultDetails
+import GPP_Library.patterns.TaskParallelPattern
  
 
 //usage runDemo concordance RunConcordancePoG resultFile workers title N
@@ -22,15 +21,14 @@ String workingDirectory = System.getProperty('user.dir')
 String fileName
 String outFileName
  
-if (args.size() == 0){
+if (args.size() == 0) {
 // assumed to be running form within Intellij
 workers = 4
 title = "bible"
 N = 8
 fileName = "./${title}.txt"
 outFileName = "./${title}PoG"
-}
-else {
+} else {
 // assumed to be running via runDemo
 String folder = args[0]
 title = args[2]
@@ -40,22 +38,22 @@ workers = Integer.parseInt(args[1])
 N = Integer.parseInt(args[3])
 }
  
-def dDetails = new DataDetails( dName: cd.getName(),
+def dDetails = new DataDetails(dName: cd.getName(),
 dInitMethod: cd.init,
 dInitData: [N, fileName, outFileName],
 dCreateMethod: cd.create,
 dCreateData: [null])
  
-def rDetails = new ResultDetails( rName: cr.getName(),
+def rDetails = new ResultDetails(rName: cr.getName(),
 rInitMethod: cr.init,
 rInitData: [minSeqLen, doFileOutput],
 rCollectMethod: cr.collector,
 rFinaliseMethod: cr.finalise,
 rFinaliseData: [null])
  
-List <ResultDetails>  resultDetails = []
+List<ResultDetails> resultDetails = []
  
-for ( g in 0..< workers) resultDetails << rDetails
+for (g in 0..<workers) resultDetails << rDetails
  
 System.gc()
 print "PoG, $doFileOutput, $title, $workers, $N, "
@@ -65,7 +63,7 @@ def startime = System.currentTimeMillis()
 //NETWORK
 
 
-def concordancePoG = new TaskParallelOfGroupCollects(
+def concordancePoG = new TaskParallelPattern(
     eDetails: dDetails,
     rDetails: resultDetails,
     stages: 3,
