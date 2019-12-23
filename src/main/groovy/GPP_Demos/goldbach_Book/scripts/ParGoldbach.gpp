@@ -1,0 +1,133 @@
+package GPP_Demos.goldbach_Book.scripts
+
+import GPP_Library.DataDetails
+import GPP_Library.GroupDetails
+import GPP_Library.LocalDetails
+import GPP_Library.ResultDetails
+import GPP_Library.connectors.reducers.ListMergeOne
+import GPP_Library.connectors.spreaders.OneSeqCastList
+import GPP_Library.functionals.groups.ListGroupList
+import GPP_Library.functionals.matrix.MultiCoreEngine
+import GPP_Library.functionals.transformers.CombineNto1
+import GPP_Library.terminals.Collect
+import GPP_Library.terminals.EmitWithLocal
+import GPP_Demos.goldbach_Book.data.MCEResult
+import GPP_Demos.goldbach_Book.data.Prime
+import GPP_Demos.goldbach_Book.data.PrimeGenerator
+import GPP_Demos.goldbach_Book.data.PartitionedSieve as ps
+import GPP_Demos.goldbach_Book.data.CombinePartitionedSieves as cps
+import GPP_Demos.goldbach_Book.data.PrimeListMCE
+
+//usage runDemo goldbach_Book/scripts ParGoldbach resultsFile scale primeWorkers nodes
+
+int scale
+int primeWorkers = 1
+int nodes
+
+if (args.size() == 0){
+  // assumed to be running form within Intellij
+  scale = 16
+//  primeWorkers = 2
+  nodes = 2
+}
+else {
+  // assumed to be running via runDemo
+  // working directory folder assumed to be in args[0]
+  scale = Integer.parseInt(args[1])
+//  primeWorkers = Integer.parseInt(args[2])
+  nodes = Integer.parseInt(args[3])
+}
+
+int k = 1024
+int maxPrime = scale * k
+
+assert (maxPrime % primeWorkers == 0):
+  "primeWorkers ($primeWorkers) MUST divide maxPrime ($maxPrime) exactly"
+
+def eDetails = new DataDetails(
+    dName: Prime.getName(),
+    dInitMethod: Prime.init,
+    dCreateMethod: Prime.getPrime,
+    lName: PrimeGenerator.getName(),
+    lInitMethod: PrimeGenerator.init,
+    lInitData: [maxPrime]
+)
+
+List groupInitialData = []
+int partitionSize = maxPrime / primeWorkers
+int offset = 0
+for (i in 0 ..< primeWorkers){
+  groupInitialData << [maxPrime, offset, partitionSize]
+  offset = offset + partitionSize
+}
+
+List < LocalDetails > primeGroupDetails = []
+
+for ( i in 0..< primeWorkers){
+  primeGroupDetails << new LocalDetails(
+      lName: ps.getName(),
+      lInitMethod: ps.init,
+      lInitData: groupInitialData[i],
+      lFinaliseMethod: ps.finalise
+  )
+}
+GroupDetails gDetails = new GroupDetails(
+    workers: primeWorkers,
+    groupDetails: primeGroupDetails
+)
+
+def combineDetails = new LocalDetails(
+    lName: cps.getName(),
+    lInitMethod: cps.init,
+)
+
+def combineOutput = new LocalDetails(
+    lName: PrimeListMCE.getName(),
+    lInitMethod: PrimeListMCE.initPrimeList,
+    lInitData: [2 * maxPrime],
+    lFinaliseMethod: PrimeListMCE.createPrimeList
+)
+
+def rDetails = new ResultDetails(
+    rName: MCEResult.getName(),
+    rInitMethod: MCEResult.init,
+    rCollectMethod: MCEResult.collector,
+    rFinaliseMethod: MCEResult.finalise
+)
+long startTime = System.currentTimeMillis()
+
+def emitter = new EmitWithLocal(
+    eDetails: eDetails
+)
+
+def spread = new OneSeqCastList()
+
+def primeGroup = new ListGroupList(
+    workers: primeWorkers,
+    gDetails: gDetails,
+    function: Prime.addPrime,
+    outData: false
+)
+
+def merger = new ListMergeOne()
+
+def combiner = new CombineNto1(
+    localDetails: combineDetails,
+    outDetails: combineOutput,
+    combineMethod: cps.combineMethod
+)
+
+def mce = new MultiCoreEngine(
+    nodes: nodes,
+    iterations: 1,
+    partitionMethod: PrimeListMCE.partitionGoldbachSpace,
+    calculationMethod: PrimeListMCE.goldbachDetermination,
+    updateMethod: PrimeListMCE.goldbachUpdate
+)
+
+def collector  = new Collect(
+    rDetails: rDetails
+)
+
+long endTime = System.currentTimeMillis()
+println "ParGoldbach, $maxPrime,  $primeWorkers, $nodes, ${endTime - startTime} msecs"

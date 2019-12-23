@@ -22,7 +22,7 @@ class JacobiResultMC extends DataClass {
     solutionValues = d.M.getByColumn(d.n + 1)
     def preSolution = d.solution.getEntries()
     if (solutionValues == preSolution) s = s + "OK" else s = s + "Not OK"
-    println "$s, "
+    print "$s, "
     return completedOK
   }
 

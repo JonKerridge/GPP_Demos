@@ -1,0 +1,16 @@
+call runDemo concordance GOP gopog bible 2 false
+call runDemo concordance GOP gopog bible 4 false
+call runDemo concordance GOP gopog bible 8 false
+call runDemo concordance GOP gopog bible 16 false
+call runDemo concordance POG gopog bible 2 false
+call runDemo concordance POG gopog bible 4 false
+call runDemo concordance POG gopog bible 8 false
+call runDemo concordance POG gopog bible 16 false
+call runDemo concordance GOPC gopog bible 2 false
+call runDemo concordance GOPC gopog bible 4 false
+call runDemo concordance GOPC gopog bible 8 false
+call runDemo concordance GOPC gopog bible 16 false
+call runDemo concordance POGC gopog bible 2 false
+call runDemo concordance POGC gopog bible 4 false
+call runDemo concordance POGC gopog bible 8 false
+call runDemo concordance POGC gopog bible 16 false

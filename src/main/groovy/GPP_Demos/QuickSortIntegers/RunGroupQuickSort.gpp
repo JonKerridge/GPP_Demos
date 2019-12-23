@@ -1,0 +1,66 @@
+package GPP_Demos.QuickSortIntegers
+
+import GPP_Demos.QuickSortIntegers.QSData as qsd
+import GPP_Demos.QuickSortIntegers.QSResult as qsr
+import GPP_Demos.QuickSortIntegers.QSWorker as qsw
+import GPP_Library.DataDetails
+import GPP_Library.LocalDetails
+import GPP_Library.ResultDetails
+import GPP_Library.connectors.reducers.N_WayMerge
+import GPP_Library.connectors.spreaders.OneDirectedList
+import GPP_Library.functionals.groups.ListThreePhaseWorkerList
+import GPP_Library.terminals.Collect
+import GPP_Library.terminals.Emit
+
+//usage runDemo QuickSortIntegers RunGroupQuickSort resultsFile workers instances
+
+
+int workers
+int instances
+if (args.size() == 0) {
+  workers = 4
+  instances = 5000
+} else {
+//    String folder = args[0] not used
+  workers = Integer.parseInt(args[1])
+  instances = Integer.parseInt(args[2])
+}
+print "QuickSort $workers, $instances, "
+
+System.gc()
+def startime = System.currentTimeMillis()
+
+def emitterDetails = new DataDetails(dName: qsd.getName(),
+    dInitMethod: qsd.init,
+    dInitData: [instances, workers],
+    dCreateMethod: qsd.create)
+
+def resultDetails = new ResultDetails(rName: qsr.getName(),
+    rInitMethod: qsr.init,
+    rCollectMethod: qsr.collector,
+    rFinaliseMethod: qsr.finalise)
+
+def workerDetails = new LocalDetails(lName: qsw.getName(),
+    lInitMethod: qsw.init)
+
+def emitter = new Emit(eDetails: emitterDetails)
+
+def fan = new OneDirectedList(indexProperty: "batch")
+
+def tpws = new ListThreePhaseWorkerList(inputMethod: qsw.inFunction,
+    workMethod: qsw.workFunction,
+    outFunction: qsw.outFunction,
+    lDetails: workerDetails,
+    workers: workers)
+
+
+def merge = new N_WayMerge(mergeChoice: qsd.mergeChoice,
+    inClassName: qsd.getName())
+
+def collector = new Collect(rDetails: resultDetails)
+
+
+def endtime = System.currentTimeMillis()
+println " ${endtime - startime}"
+
+

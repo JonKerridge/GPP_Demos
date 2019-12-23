@@ -1,0 +1,113 @@
+package GPP_Demos.concordance
+
+import GPP_Demos.concordance.ConcordanceCombine as cc
+import GPP_Demos.concordance.ConcordanceData as cd
+import GPP_Demos.concordance.ConcordanceResults as cr
+import GPP_Demos.concordance.ConcordanceWords as cw
+import GPP_Library.DataDetails
+import GPP_Library.LocalDetails
+import GPP_Library.ResultDetails
+import GPP_Library.connectors.reducers.ListMergeOne
+import GPP_Library.connectors.spreaders.OneFanList
+import GPP_Library.functionals.groups.ListGroupList
+import GPP_Library.functionals.pipelines.OnePipelineOne
+import GPP_Library.functionals.transformers.CombineNto1
+import GPP_Library.terminals.Collect
+import GPP_Library.terminals.Emit
+import GPP_Library.terminals.EmitFromInput
+
+//usage runDemo concordance RunExtendedConcordance resultsFile title blockWorkers blocksize
+
+int blockWorkers
+int blockSize
+String title
+int N = 8
+int minSeqLen = 2
+boolean doFileOutput = false
+String workingDirectory = System.getProperty('user.dir')
+String fileName
+String outFileName
+
+if (args.size() == 0) {
+  // assumed to be running form within Intellij
+  blockWorkers = 4
+  blockSize = 64000
+  title = "bible"
+  fileName = "./${title}.txt"
+  outFileName = "./${title}XtndEPC"
+} else {
+  // assumed to be running via runDemo
+  String folder = args[0]
+  title = args[1]
+  fileName = workingDirectory + "/src/main/groovy/GPP_Demos/${folder}/${title}.txt"
+  outFileName = workingDirectory + "/src/main/groovy/GPP_Demos/${folder}/${title}Ext"
+  blockWorkers = Integer.parseInt(args[2])
+  blockSize = Integer.parseInt(args[3])
+}
+
+def dDetails = new DataDetails(dName: cw.getName(),
+    dInitMethod: cw.init,
+    dInitData: [fileName, blockSize],
+    dCreateMethod: cw.create,
+    dCreateData: [null])
+
+def localData = new LocalDetails(lName: cc.getName(),
+    lInitData: [N, outFileName],
+    lInitMethod: cc.init,
+    lFinaliseMethod: cc.finalise)
+
+def outData = new LocalDetails(lName: cd.getName(),
+    lInitMethod: cd.initLocal,
+    lInitData: null,
+    lCreateMethod: cd.create,
+    lFinaliseMethod: cd.finalise)
+
+def rDetails = new ResultDetails(rName: cr.getName(),
+    rInitMethod: cr.init,
+    rInitData: [minSeqLen, doFileOutput],
+    rCollectMethod: cr.collector,
+    rFinaliseMethod: cr.finalise,
+    rFinaliseData: [null])
+
+print "XtndEPC, $doFileOutput, $title, $blockWorkers, $blockSize, "
+System.gc()
+def startime = System.currentTimeMillis()
+
+//@log 1 "./XtndEPC-"
+
+def emit = new Emit(eDetails: dDetails,
+    logPhaseName: "emit",
+    logPropertyName: "bufferInstance")
+
+def fos = new OneFanList()
+
+def group = new ListGroupList(function: cw.processBuffer,
+    workers: blockWorkers,
+    logPhaseName: "buffer",
+    logPropertyName: "bufferInstance")
+
+def fis = new ListMergeOne()
+
+def combine = new CombineNto1(localDetails: localData,
+    outDetails: outData,
+    combineMethod: cc.appendBuff,
+    logPhaseName: "combine",
+    outputLogPropertyName: "strLen",
+    inputLogPropertyName: "bufferInstance")
+
+def emitInstances = new EmitFromInput(eDetails: outData,
+    logPhaseName: "emitInstances",
+    logPropertyName: "strLen")
+
+def pipe = new OnePipelineOne(stages: 3,
+    stageOp: [cd.valueList, cd.indicesMap, cd.wordsMap],
+    logPhaseNames: ["value", "indeces", "words" ],
+    logPropertyName: "strLen" )
+
+def collector = new Collect(rDetails: rDetails,
+    logPhaseName: "collect",
+    logPropertyName: "strLen")
+
+def endtime = System.currentTimeMillis()
+println " ${endtime - startime} "
+

@@ -1,0 +1,9 @@
+call runDemo concordance EPC epc bible false 8
+call runDemo concordance EPC epc bible false 16
+call runDemo concordance EPC epc bible false 32
+call runDemo concordance EPC epc 2bibles false 8
+call runDemo concordance EPC epc 2bibles false 16
+call runDemo concordance EPC epc 2bibles false 32
+call runDemo concordance EPC epc 4bibles false 8
+call runDemo concordance EPC epc 4bibles false 16
+call runDemo concordance EPC epc 4bibles false 32

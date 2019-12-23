@@ -30,7 +30,7 @@ class NbodyData extends DataClass {
     reader = file.newReader()
     N = d[1]
     dt = d[2]
-    return constants.completedOK
+    return completedOK
   } // init
 
   static boolean inputComplete = false

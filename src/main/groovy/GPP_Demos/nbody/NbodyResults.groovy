@@ -31,7 +31,7 @@ class NbodyResults extends GPP_Library.DataClass {
     printFile = new File(printFileName)
 //        printFile.createNewFile()
     printWriter = printFile.newPrintWriter()
-    return constants.completedOK
+    return completedOK
   }
 
   int collector(NbodyData o) {
@@ -46,11 +46,11 @@ class NbodyResults extends GPP_Library.DataClass {
     }
     printWriter.flush()
     printWriter.close()
-    return constants.completedOK
+    return completedOK
   }
 
   int finalise(List p) {
-      return constants.completedOK
+      return completedOK
     }
 
 }
