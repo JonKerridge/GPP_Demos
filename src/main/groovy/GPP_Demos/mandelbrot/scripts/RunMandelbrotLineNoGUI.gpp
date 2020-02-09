@@ -14,9 +14,9 @@ import GPP_Demos.mandelbrot.data.MandelbrotLineCollect as mlc
 
 int workers
 int maxIterations          // 100
-int width                  //1400    700        350 in pixels
-int height                 //800     400        200 in pixels
-double pixelDelta          //0.0025  0.005      0.01 in
+int width                  //1400    700        350 in pixels  2800
+int height                 //800     400        200 in pixels  1600
+double pixelDelta          //0.0025  0.005      0.01           0.00125
 
 
 if (args.size() == 0){

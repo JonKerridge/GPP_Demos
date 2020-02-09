@@ -30,7 +30,7 @@ def fileOutPath = "D:\\QuickSortOutputs\\"
 int workers
 String inFileName, outFileName
 if (args.size() == 0) {
-workers = 1
+workers = 16
 inFileName = fileInPath + "1m-input.txt"
 outFileName = fileOutPath + "1m-output.txt"
 } else {

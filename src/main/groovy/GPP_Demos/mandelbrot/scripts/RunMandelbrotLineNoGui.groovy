@@ -17,10 +17,10 @@ import GPP_Demos.mandelbrot.data.MandelbrotLineCollect as mlc
 // usage runDemo mandelbrot/scripts RunMandelBrotLineNoGUI workers maxInterations width height pixeldelta
  
 int workers
-int maxIterations
-int width                  //1400   700        350
-int height                 //800    400        200
-double pixelDelta         //0.0025 0.005      0.01
+int maxIterations          // 100
+int width                  //1400    700        350 in pixels  2800
+int height                 //800     400        200 in pixels  1600
+double pixelDelta          //0.0025  0.005      0.01           0.00125
  
  
 if (args.size() == 0){
@@ -89,7 +89,7 @@ def collector = new Collect(
     // no output channel required
     rDetails: resultDetails)
 
-PAR network = new PAR()
+PAR network
  network = new PAR([emit , spread , group , reduce , collector ])
  network.run()
  network.removeAllProcesses()
