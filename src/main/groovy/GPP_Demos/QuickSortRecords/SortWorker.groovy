@@ -3,7 +3,7 @@ package GPP_Demos.QuickSortRecords
 
 import GPP_Library.DataClass
 
-class SortWorker extends DataClass{
+public class SortWorker extends DataClass{
 
   List <Record> recordBuffer
 

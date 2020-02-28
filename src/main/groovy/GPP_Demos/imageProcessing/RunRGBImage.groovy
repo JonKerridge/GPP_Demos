@@ -23,7 +23,7 @@ String outFile
 if (args.size() == 0){
 nodes = 16
 inFileName = "DSC_0120-001.jpg"
-outFileName = "DSC_0120_RGB_${nodes}_K6_K6.jpg.jpg"
+outFileName = "DSC_0120_001_RGB_${nodes}_K6_K6.jpg"
 inFile = "./$inFileName"
 outFile = "./$outFileName"
 }
@@ -31,7 +31,7 @@ else {
 nodes = Integer.parseInt(args[1])
 String folder = args[0]
 inFileName = "DSC_0120.jpg"
-outFileName = "DSC_0120_RGB_${nodes}_K6_K6.jpg.jpg"
+outFileName = "DSC_0120_RGB_${nodes}_K6_K6.jpg"
 inFile = workingDirectory + "/src/main/groovy/GPP_Demos/${folder}/$inFileName"
 outFile = workingDirectory + "/src/main/groovy/GPP_Demos/${folder}/$outFileName"
 }

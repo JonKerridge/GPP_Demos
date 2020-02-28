@@ -2,7 +2,7 @@ package GPP_Demos.QuickSortRecords
 
 import GPP_Library.DataClass
 
-class Record extends DataClass{
+public class Record extends DataClass{
   String dataField
 
   static String initFile = "init"
@@ -11,7 +11,7 @@ class Record extends DataClass{
 
   static BufferedReader reader = null
 
-  int init (List d){
+  int init (List d){ //[input-file-name]
     File file  = new File((String)d[0])
     reader = file.newReader()
     return completedOK

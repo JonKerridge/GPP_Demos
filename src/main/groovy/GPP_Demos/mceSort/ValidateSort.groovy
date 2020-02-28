@@ -1,10 +1,10 @@
-package GPP_Demos.QuickSortRecords
+package GPP_Demos.mceSort
 
 def fileOutPath = "D:\\QuickSortOutputs\\"
 
 String inFileName
 if (args.size() == 0) {
-  inFileName = fileOutPath + "16m-output-seq.txt"
+  inFileName = fileOutPath + "1m-outputSeqMCE.txt"
 } else {
 //    String folder = args[0] not used
   inFileName = fileOutPath + args[1]
@@ -31,4 +31,4 @@ while (line2 != null){
     break
   }
 }
-if (line2 == null) println "File is sorted correctly $count records"
+if (line2 == null) println "File $inFileName is sorted correctly $count records"

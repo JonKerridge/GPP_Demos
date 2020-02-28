@@ -13,9 +13,9 @@ version '1.0.2'
 
 
 def jcspLib = "C:/jcspLib"
-def gppLibraryJarFile = "GPP_Library-1.0.4.jar"
+def gppLibraryJarFile = "GPP_Library-1.0.5.jar"
 
-def gppBuilderJarFile = "GPP_Builder-1.0.4.jar"
+def gppBuilderJarFile = "GPP_Builder-1.0.5.jar"
 
 println "using gppLibrary library $jcspLib\\$gppLibraryJarFile"
 println "using gppBuilder library $jcspLib\\$gppBuilderJarFile"

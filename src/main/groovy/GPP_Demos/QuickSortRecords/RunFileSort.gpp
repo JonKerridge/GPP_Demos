@@ -71,7 +71,6 @@ def tpws = new ListThreePhaseWorkerList(
     lDetails: workerDetails,
     workers: workers)
 
-
 def merge = new N_WayMerge(
     mergeChoice: Record.mergeChoice,
     inClassName: Record.getName())
