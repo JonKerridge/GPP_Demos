@@ -1,13 +1,14 @@
 package GPP_Demos.mceSort
 
+import jcsp.lang.*
+import groovyJCSP.*
+ 
 import GPP_Library.DataDetails
 import GPP_Library.ResultDetails
 import GPP_Library.functionals.matrix.MultiCoreEngine
 import GPP_Library.terminals.Collect
 import GPP_Library.terminals.EmitSingle
-import groovyJCSP.PAR
-import jcsp.lang.Channel
-
+ 
 
 def fileInPath = "D:\\QuickSortInputs\\"
 def fileOutPath = "D:\\QuickSortOutputs\\"

@@ -9,7 +9,7 @@ version '1.0.2'
 // version 1.0.0 was the base version with the Builder reconfigured
 // so that many of the calls are just a call to a base version of the required connection
 // version 1.0.1 includes the Visualisation of matrix style engines
-// version 1.0.2 uses libraries built using Java 11(LTS) and Groovy3.0.0-rc-3
+// version 1.0.2 uses libraries built using Java 11(LTS) and Groovy3.0.1
 
 
 def jcspLib = "C:/jcspLib"

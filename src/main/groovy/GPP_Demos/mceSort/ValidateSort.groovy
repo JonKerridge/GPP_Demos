@@ -4,7 +4,7 @@ def fileOutPath = "D:\\QuickSortOutputs\\"
 
 String inFileName
 if (args.size() == 0) {
-  inFileName = fileOutPath + "1m-outputSeqMCE.txt"
+  inFileName = fileOutPath + "1m-outputMCE.txt"
 } else {
 //    String folder = args[0] not used
   inFileName = fileOutPath + args[1]
