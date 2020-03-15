@@ -4,6 +4,7 @@ Contact J.Kerridge@napier.ac.uk
 
 It is a work in progress and not all demos will work.
 
+The build assumes you are using Java-11 and Groovy-3.0.2
 
 It is known that the demos do work with the current release of groovy 3.0.2.
 
