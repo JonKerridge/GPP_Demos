@@ -6,8 +6,8 @@ import javax.imageio.ImageIO
 
 import groovy.transform.CompileStatic
 
-import GPP_Library.functionals.matrix.Matrix
-import GPP_Library.DataClass
+import groovyParallelPatterns.functionals.matrix.Matrix
+import groovyParallelPatterns.DataClass
 
 @CompileStatic
 class CompositeGSImage extends DataClass{

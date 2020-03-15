@@ -1,6 +1,6 @@
 package GPP_Demos.jacobi
 
-import GPP_Library.functionals.matrix.*
+import groovyParallelPatterns.functionals.matrix.*
 
 int n = 128
 int range = 9		// range of values for non-daigonal elements

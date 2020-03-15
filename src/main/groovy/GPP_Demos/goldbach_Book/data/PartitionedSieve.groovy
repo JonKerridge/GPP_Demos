@@ -1,6 +1,6 @@
 package GPP_Demos.goldbach_Book.data
 
-import GPP_Library.DataClass
+import groovyParallelPatterns.DataClass
 
 class PartitionedSieve extends DataClass{
   int maxPrime
@@ -27,7 +27,7 @@ class PartitionedSieve extends DataClass{
     return completedOK
   }
 
-  void addNextPrime(int p) {
+  void addNextPrime(int p) {  // p is Prime.primeValue
     int bit
     int limit
     limit = offset + partitionSize - 1

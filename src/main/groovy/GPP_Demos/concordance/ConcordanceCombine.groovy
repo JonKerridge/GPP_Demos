@@ -1,6 +1,6 @@
 package GPP_Demos.concordance
 
-import GPP_Library.DataClass
+import groovyParallelPatterns.DataClass
 
 class ConcordanceCombine extends DataClass{
   def wordBufferAll = []

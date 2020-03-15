@@ -3,7 +3,7 @@ package GPP_Demos.goldbach_Paper.data
 import groovy.transform.CompileStatic
 
 @CompileStatic
-class InternalPrimeList extends GPP_Library.DataClass {
+class InternalPrimeList extends groovyParallelPatterns.DataClass {
 
   List primes = []
 

@@ -2,11 +2,11 @@ package GPP_Demos.solarSystem
 
 import groovy.transform.CompileStatic
 
-import GPP_Library.DataClassInterface as constants
+import groovyParallelPatterns.DataClassInterface as constants
 
 
 @CompileStatic
-class PlanetrySystem extends GPP_Library.DataClass {
+class PlanetrySystem extends groovyParallelPatterns.DataClass {
 
 	List <Planet> planets = []
 	List <Range> partitionRanges = [] // a list of 'nodes' partition ranges

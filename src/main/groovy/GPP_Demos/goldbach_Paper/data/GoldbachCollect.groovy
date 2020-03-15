@@ -3,7 +3,7 @@ package GPP_Demos.goldbach_Paper.data
 import groovy.transform.CompileStatic
 
 @CompileStatic
-class GoldbachCollect extends GPP_Library.DataClass {
+class GoldbachCollect extends groovyParallelPatterns.DataClass {
 
   int minGoldbach = 6
   int maxGoldbach = 0

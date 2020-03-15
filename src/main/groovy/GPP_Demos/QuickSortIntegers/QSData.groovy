@@ -3,7 +3,7 @@ package GPP_Demos.QuickSortIntegers
 import groovy.transform.CompileStatic
 
 @CompileStatic
-class QSData extends GPP_Library.DataClass {
+class QSData extends groovyParallelPatterns.DataClass {
 
   int index
   String dataValue

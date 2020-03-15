@@ -1,9 +1,9 @@
 package GPP_Demos.goldbach_Paper.scripts
 
-import GPP_Library.DataDetails
-import GPP_Library.ResultDetails
-import GPP_Library.terminals.Collect
-import GPP_Library.terminals.EmitWithLocal
+import groovyParallelPatterns.DataDetails
+import groovyParallelPatterns.ResultDetails
+import groovyParallelPatterns.terminals.Collect
+import groovyParallelPatterns.terminals.EmitWithLocal
 
 import GPP_Demos.goldbach_Paper.data.Prime as p
 import GPP_Demos.goldbach_Paper.data.PrimeListSeqSimple as pl

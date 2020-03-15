@@ -2,7 +2,7 @@ package GPP_Demos.MCpi
 
 import jcsp.lang.ChannelOutput
 
-class MCpiFeedback extends GPP_Library.DataClass {
+class MCpiFeedback extends groovyParallelPatterns.DataClass {
     static int previousIterations = 0
     static int previousWithin = 0
     static double errorMargin = 0.1

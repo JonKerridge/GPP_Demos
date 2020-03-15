@@ -1,5 +1,5 @@
 /**
- * The demos in this package use some of the Farm type patterns in the package {@link GPP_Library.patterns} to implement a
+ * The demos in this package use some of the Farm type patterns in the package {@link groovyParallelPatterns.patterns} to implement a
  * solution to the calculation of pi using a MonteCarlo method.
  * <p>
  * Consider a unit positive quadrant and use a random number generator to create points [x, y] such that both
@@ -41,7 +41,7 @@
  *</pre>
  *
  *
- * @see GPP_Library.patterns#FarmPattern.groovy
+ * @see groovyParallelPatterns.patterns#FarmPattern.groovy
  */
 
 package GPP_Demos.MCpi;

@@ -3,7 +3,7 @@ package GPP_Demos.QuickSortIntegers
 import groovy.transform.CompileStatic
 
 @CompileStatic
-class QSWorker extends GPP_Library.DataClass {
+class QSWorker extends groovyParallelPatterns.DataClass {
 
   List<QSData> qsBuffer = []
   static String init = "nullInitialise"

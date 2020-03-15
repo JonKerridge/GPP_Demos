@@ -1,10 +1,10 @@
 package GPP_Demos.concordance
 
-import GPP_Library.DataDetails
-import GPP_Library.ResultDetails
-import GPP_Library.functionals.pipelines.OnePipelineOne
-import GPP_Library.terminals.Collect
-import GPP_Library.terminals.Emit
+import groovyParallelPatterns.DataDetails
+import groovyParallelPatterns.ResultDetails
+import groovyParallelPatterns.functionals.pipelines.OnePipelineOne
+import groovyParallelPatterns.terminals.Collect
+import groovyParallelPatterns.terminals.Emit
 
 import GPP_Demos.concordance.ConcordanceData as cd
 import GPP_Demos.concordance.ConcordanceResults as cr
@@ -50,7 +50,7 @@ def rDetails = new ResultDetails( rName: cr.getName(),
     rFinaliseData: [null])
 
 System.gc()
-print "EPC, $doFileOutput, $title, "
+print "EPClog, $doFileOutput, $title, "
 
 def startime = System.currentTimeMillis()
 

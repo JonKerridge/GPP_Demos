@@ -3,17 +3,17 @@ package GPP_Demos.goldbach_Book.scripts
 import jcsp.lang.*
 import groovyJCSP.*
  
-import GPP_Library.DataDetails
-import GPP_Library.GroupDetails
-import GPP_Library.LocalDetails
-import GPP_Library.ResultDetails
-import GPP_Library.connectors.reducers.ListMergeOne
-import GPP_Library.connectors.spreaders.OneSeqCastList
-import GPP_Library.functionals.groups.ListGroupList
-import GPP_Library.functionals.matrix.MultiCoreEngine
-import GPP_Library.functionals.transformers.CombineNto1
-import GPP_Library.terminals.Collect
-import GPP_Library.terminals.EmitWithLocal
+import groovyParallelPatterns.DataDetails
+import groovyParallelPatterns.GroupDetails
+import groovyParallelPatterns.LocalDetails
+import groovyParallelPatterns.ResultDetails
+import groovyParallelPatterns.connectors.reducers.ListMergeOne
+import groovyParallelPatterns.connectors.spreaders.OneSeqCastList
+import groovyParallelPatterns.functionals.groups.ListGroupList
+import groovyParallelPatterns.functionals.matrix.MultiCoreEngine
+import groovyParallelPatterns.functionals.transformers.CombineNto1
+import groovyParallelPatterns.terminals.Collect
+import groovyParallelPatterns.terminals.EmitWithLocal
 import GPP_Demos.goldbach_Book.data.MCEResult
 import GPP_Demos.goldbach_Book.data.Prime
 import GPP_Demos.goldbach_Book.data.PrimeGenerator
@@ -25,20 +25,20 @@ import GPP_Demos.goldbach_Book.data.PrimeListMCE
 //usage runDemo goldbach_Book/scripts ParGoldbach resultsFile scale primeWorkers nodes
  
 int scale
-int primeWorkers
+int primeWorkers = 1
 int nodes
  
 if (args.size() == 0){
 // assumed to be running form within Intellij
-scale = 256
-primeWorkers = 1
-nodes = 16
+scale = 16
+//  primeWorkers = 2
+nodes = 2
 }
 else {
 // assumed to be running via runDemo
 // working directory folder assumed to be in args[0]
 scale = Integer.parseInt(args[1])
-primeWorkers = Integer.parseInt(args[2])
+//  primeWorkers = Integer.parseInt(args[2])
 nodes = Integer.parseInt(args[3])
 }
  

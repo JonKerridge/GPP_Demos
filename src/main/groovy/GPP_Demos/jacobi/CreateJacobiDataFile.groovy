@@ -1,6 +1,6 @@
 package GPP_Demos.jacobi
 
-import GPP_Library.functionals.matrix.*
+import groovyParallelPatterns.functionals.matrix.*
 // before running bat files you need to create two additional Jacobi files for
 // system sizes of 4096 and 8192  equations
 

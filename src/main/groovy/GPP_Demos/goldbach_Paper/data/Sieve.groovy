@@ -1,6 +1,6 @@
 package GPP_Demos.goldbach_Paper.data
 
-class Sieve extends GPP_Library.DataClass {
+class Sieve extends groovyParallelPatterns.DataClass {
 
   List sieve = []		//sieve[i] holds prime state for i+1
   int N = 0

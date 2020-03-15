@@ -1,10 +1,10 @@
 package GPP_Demos.MCpi
 
-import GPP_Library.*
-import GPP_Library.connectors.reducers.*
-import GPP_Library.connectors.spreaders.*
-import GPP_Library.terminals.*
-import GPP_Library.functionals.groups.*
+import groovyParallelPatterns.*
+import groovyParallelPatterns.connectors.reducers.*
+import groovyParallelPatterns.connectors.spreaders.*
+import groovyParallelPatterns.terminals.*
+import groovyParallelPatterns.functionals.groups.*
 import GPP_Demos.MCpi.MCpiData as piData
 import GPP_Demos.MCpi.MCpiResults as piResults
 

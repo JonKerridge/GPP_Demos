@@ -1,6 +1,6 @@
 package GPP_Demos.QuickSortRecords
 
-import GPP_Library.DataClass as dc
+import groovyParallelPatterns.DataClass as dc
 import GPP_Demos.QuickSortRecords.Record
 import GPP_Demos.QuickSortRecords.SortWorker
 

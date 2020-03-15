@@ -3,10 +3,10 @@ package GPP_Demos.QuickSortRecords
 import jcsp.lang.*
 import groovyJCSP.*
  
-import GPP_Library.DataDetails
-import GPP_Library.ResultDetails
-import GPP_Library.terminals.Collect
-import GPP_Library.terminals.Emit
+import groovyParallelPatterns.DataDetails
+import groovyParallelPatterns.ResultDetails
+import groovyParallelPatterns.terminals.Collect
+import groovyParallelPatterns.terminals.Emit
  
 
 def fileInPath = "D:\\QuickSortInputs\\"

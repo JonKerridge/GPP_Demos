@@ -3,7 +3,7 @@ package GPP_Demos.goldbach_Paper.data
 import groovy.transform.CompileStatic
 
 @CompileStatic
-class GoldbachRange extends GPP_Library.DataClass {
+class GoldbachRange extends groovyParallelPatterns.DataClass {
 
   int rangeStart = 0
   int rangeEnd = 0

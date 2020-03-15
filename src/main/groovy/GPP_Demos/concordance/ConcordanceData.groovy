@@ -1,6 +1,6 @@
 package GPP_Demos.concordance
 
-class ConcordanceData extends GPP_Library.DataClass {
+class ConcordanceData extends groovyParallelPatterns.DataClass {
 
   static int N = 0				// the maximum string length
   int strLen = 0					// the string length created by this instance
@@ -108,7 +108,7 @@ class ConcordanceData extends GPP_Library.DataClass {
   }
 
   /* (non-Javadoc)
-   * @see jcsp.GPP_Library.DataClass#initClass(java.lang.Object)
+   * @see jcsp.groovyParallelPatterns.DataClass#initClass(java.lang.Object)
    */
   public int initClass( List d) {
     if ( d == null )return completedOK

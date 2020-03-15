@@ -3,11 +3,11 @@ package GPP_Demos.jacobi
 import jcsp.lang.*
 import groovyJCSP.*
  
-import GPP_Library.DataDetails
-import GPP_Library.ResultDetails
-import GPP_Library.functionals.matrix.MultiCoreEngine
-import GPP_Library.terminals.Collect
-import GPP_Library.terminals.Emit
+import groovyParallelPatterns.DataDetails
+import groovyParallelPatterns.ResultDetails
+import groovyParallelPatterns.functionals.matrix.MultiCoreEngine
+import groovyParallelPatterns.terminals.Collect
+import groovyParallelPatterns.terminals.Emit
 import GPP_Demos.jacobi.JacobiDataMC as jd
 import GPP_Demos.jacobi.JacobiResultMC as jr
  
@@ -29,7 +29,7 @@ String fileName
  
 if (args.size() == 0){
 nodes = 4
-title = "Jacobi32"
+title = "Jacobi1024"
 fileName = "./${title}.txt"
 }
 else {

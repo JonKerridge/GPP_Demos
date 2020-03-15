@@ -3,11 +3,11 @@ package GPP_Demos.nbody
 import jcsp.lang.*
 import groovyJCSP.*
  
-import GPP_Library.DataDetails
-import GPP_Library.ResultDetails
-import GPP_Library.functionals.matrix.MultiCoreEngine
-import GPP_Library.terminals.Collect
-import GPP_Library.terminals.Emit
+import groovyParallelPatterns.DataDetails
+import groovyParallelPatterns.ResultDetails
+import groovyParallelPatterns.functionals.matrix.MultiCoreEngine
+import groovyParallelPatterns.terminals.Collect
+import groovyParallelPatterns.terminals.Emit
 import GPP_Demos.nbody.NbodyData as nd
 import GPP_Demos.nbody.NbodyResults as nr
  
@@ -57,10 +57,10 @@ rFinaliseMethod: nr.finalise)
  
 //@log 1 "./NBody-"
 
-import GPP_Library.Logger
-import GPP_Library.LoggingVisualiser
-import GPP_Library.gppVis.Visualiser
-import GPP_Library.gppVis.Connector
+import groovyParallelPatterns.Logger
+import groovyParallelPatterns.LoggingVisualiser
+import groovyParallelPatterns.gppVis.Visualiser
+import groovyParallelPatterns.gppVis.Connector
 import javafx.application.Platform
 
 def logChan = Channel.any2one()

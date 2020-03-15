@@ -1,11 +1,11 @@
 package GPP_Demos.concordance
 
-import GPP_Library.DataDetails
-import GPP_Library.ResultDetails
-import GPP_Library.connectors.spreaders.OneFanAny
-import GPP_Library.functionals.composites.AnyGroupOfPipelineCollects
-import GPP_Library.patterns.GroupOfPipelinesPattern
-import GPP_Library.terminals.Emit
+import groovyParallelPatterns.DataDetails
+import groovyParallelPatterns.ResultDetails
+import groovyParallelPatterns.connectors.spreaders.OneFanAny
+import groovyParallelPatterns.functionals.composites.AnyGroupOfPipelineCollects
+import groovyParallelPatterns.patterns.GroupOfPipelinesPattern
+import groovyParallelPatterns.terminals.Emit
 
 import GPP_Demos.concordance.ConcordanceData as cd
 import GPP_Demos.concordance.ConcordanceResults as cr

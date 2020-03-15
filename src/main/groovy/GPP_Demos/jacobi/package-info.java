@@ -11,7 +11,7 @@
  * Test files are provided, which are known to have a solution that converges for values of n 512, 1024, 2048 and 4096.<p>
  * Another test file is provided that contains 4 different data sets ranging in size from 128 to 1024. (Jacobi.txt)<p>
  *
- * The parallel architecture uses the Root and Node processes provided in the package jcsp.GPP_Library.divideAndConquer
+ * The parallel architecture uses the Root and Node processes provided in the package jcsp.groovyParallelPatterns.divideAndConquer
  *
  * An Emit process reads in the matrix(ces) from a file and constructs an object that is sent to
  * the Root node.  The Root node then send copies of the base object to each of the Node processes.

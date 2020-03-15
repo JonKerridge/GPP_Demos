@@ -1,11 +1,11 @@
 package GPP_Demos.mandelbrot.cluster
 
-import GPP_Library.cluster.*
-import GPP_Library.connectors.reducers.AnyFanOne
-import GPP_Library.terminals.Collect
+import groovyParallelPatterns.cluster.*
+import groovyParallelPatterns.connectors.reducers.AnyFanOne
+import groovyParallelPatterns.terminals.Collect
 import groovyJCSP.*
 import jcsp.lang.*
-import GPP_Library.*
+import groovyParallelPatterns.*
 
 import GPP_Demos.mandelbrot.data.MandelbrotCollect as mc
 

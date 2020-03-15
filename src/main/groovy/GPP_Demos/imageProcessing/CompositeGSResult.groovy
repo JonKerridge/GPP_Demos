@@ -3,7 +3,7 @@ package GPP_Demos.imageProcessing
 import java.awt.image.BufferedImage
 import javax.imageio.ImageIO
 
-import GPP_Library.DataClassInterface as constants
+import groovyParallelPatterns.DataClassInterface as constants
 
 import groovy.transform.CompileStatic
 

@@ -1,10 +1,10 @@
 package GPP_Demos.mandelbrot.cluster
 
 import GPP_Demos.mandelbrot.data.MandelbrotPixel as mp
-import GPP_Library.*
-import GPP_Library.cluster.*
-import GPP_Library.cluster.connectors.*
-import GPP_Library.terminals.Emit
+import groovyParallelPatterns.*
+import groovyParallelPatterns.cluster.*
+import groovyParallelPatterns.cluster.connectors.*
+import groovyParallelPatterns.terminals.Emit
 import groovyJCSP.*
 import jcsp.lang.*
 

@@ -3,11 +3,11 @@ package GPP_Demos.MCpi
 import jcsp.lang.*
 import groovyJCSP.*
  
-import GPP_Library.*
-import GPP_Library.connectors.reducers.*
-import GPP_Library.connectors.spreaders.*
-import GPP_Library.terminals.*
-import GPP_Library.functionals.groups.*
+import groovyParallelPatterns.*
+import groovyParallelPatterns.connectors.reducers.*
+import groovyParallelPatterns.connectors.spreaders.*
+import groovyParallelPatterns.terminals.*
+import groovyParallelPatterns.functionals.groups.*
 import GPP_Demos.MCpi.MCpiData as piData
 import GPP_Demos.MCpi.MCpiResults as piResults
  
@@ -49,10 +49,10 @@ def startime = System.currentTimeMillis()
  
 //@log 1 "./LogFile-2-"
 
-import GPP_Library.Logger
-import GPP_Library.LoggingVisualiser
-import GPP_Library.gppVis.Visualiser
-import GPP_Library.gppVis.Connector
+import groovyParallelPatterns.Logger
+import groovyParallelPatterns.LoggingVisualiser
+import groovyParallelPatterns.gppVis.Visualiser
+import groovyParallelPatterns.gppVis.Connector
 import javafx.application.Platform
 
 def logChan = Channel.any2one()

@@ -1,10 +1,10 @@
 package GPP_Demos.MCpi
 
-import GPP_Library.DataDetails
-import GPP_Library.GroupDetails
-import GPP_Library.LocalDetails
-import GPP_Library.ResultDetails
-import GPP_Library.patterns.DataParallelPattern
+import groovyParallelPatterns.DataDetails
+import groovyParallelPatterns.GroupDetails
+import groovyParallelPatterns.LocalDetails
+import groovyParallelPatterns.ResultDetails
+import groovyParallelPatterns.patterns.DataParallelPattern
 import GPP_Demos.MCpi.MCpiPartData as piPartData
 import GPP_Demos.MCpi.MCpiPartResults as piPartResults
 import GPP_Demos.MCpi.MCpiPartWorker as piPartWorker

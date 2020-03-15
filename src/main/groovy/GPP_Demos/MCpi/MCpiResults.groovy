@@ -10,7 +10,7 @@ import GPP_Demos.MCpi.MCpiData as piData
  * @param withinSum the total sum of the number of random points that are within the unit circle
  * @return completedOK
  */
-class MCpiResults extends GPP_Library.DataClass {
+class MCpiResults extends groovyParallelPatterns.DataClass {
   int iterationSum = 0
   int withinSum = 0
   static String init = "initClass"

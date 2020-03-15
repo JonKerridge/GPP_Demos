@@ -2,7 +2,7 @@ package GPP_Demos.mandelbrot.data
 
 import GPP_Demos.mandelbrot.cluster.SerializedMandelbrotLine
 
-class MandelbrotLine extends GPP_Library.DataClass {
+class MandelbrotLine extends groovyParallelPatterns.DataClass {
 
   int []colour		// array of colour values for this line
   double [][] line 	// array of [x,y] values for this line

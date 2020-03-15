@@ -3,7 +3,7 @@ package GPP_Demos.mandelbrot.data
 //import GPP_Demos.mandelbrot.cluster.SerializedMandelbrotPixel
 import GPP_Demos.mandelbrot.cluster.*
 
-class MandelbrotPixel  extends GPP_Library.DataClass {
+class MandelbrotPixel  extends groovyParallelPatterns.DataClass {
   int px, py, colour = -1
   double x, y
   static int maxIterations = 500

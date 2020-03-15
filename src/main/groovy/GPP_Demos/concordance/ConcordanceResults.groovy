@@ -1,7 +1,7 @@
 package GPP_Demos.concordance
 
 
-class ConcordanceResults extends GPP_Library.DataClass {
+class ConcordanceResults extends groovyParallelPatterns.DataClass {
 
   String printFileName = ""
   def printWriter = null

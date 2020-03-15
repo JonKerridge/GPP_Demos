@@ -1,9 +1,9 @@
 package GPP_Demos.mandelbrot.cluster
 
-import GPP_Library.cluster.NodeInterface
-import GPP_Library.cluster.connectors.NodeRequestingFanAny
-import GPP_Library.connectors.reducers.AnyFanOne
-import GPP_Library.functionals.groups.AnyGroupAny
+import groovyParallelPatterns.cluster.NodeInterface
+import groovyParallelPatterns.cluster.connectors.NodeRequestingFanAny
+import groovyParallelPatterns.connectors.reducers.AnyFanOne
+import groovyParallelPatterns.functionals.groups.AnyGroupAny
 import groovyJCSP.*
 import jcsp.lang.*
 

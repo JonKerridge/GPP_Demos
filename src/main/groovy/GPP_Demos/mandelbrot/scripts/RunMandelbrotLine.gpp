@@ -1,11 +1,11 @@
 package GPP_Demos.mandelbrot.scripts
 
-import GPP_Library.connectors.reducers.AnyFanOne
-import GPP_Library.connectors.spreaders.OneFanAny
-import GPP_Library.functionals.groups.AnyGroupAny
-import GPP_Library.terminals.CollectUI
-import GPP_Library.terminals.Emit
-import GPP_Library.*
+import groovyParallelPatterns.connectors.reducers.AnyFanOne
+import groovyParallelPatterns.connectors.spreaders.OneFanAny
+import groovyParallelPatterns.functionals.groups.AnyGroupAny
+import groovyParallelPatterns.terminals.CollectUI
+import groovyParallelPatterns.terminals.Emit
+import groovyParallelPatterns.*
 
 import java.awt.*
 

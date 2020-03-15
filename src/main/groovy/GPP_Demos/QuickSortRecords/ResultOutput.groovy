@@ -1,6 +1,6 @@
 package GPP_Demos.QuickSortRecords
 
-import GPP_Library.DataClass
+import groovyParallelPatterns.DataClass
 
 class ResultOutput extends DataClass{
 

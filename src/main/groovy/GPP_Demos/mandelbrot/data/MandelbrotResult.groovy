@@ -4,7 +4,7 @@ import java.awt.*
 import java.util.List;
 import jcsp.awt.*
 
-class MandelbrotResult extends GPP_Library.DataClass {
+class MandelbrotResult extends groovyParallelPatterns.DataClass {
 
   static int width
   static int height

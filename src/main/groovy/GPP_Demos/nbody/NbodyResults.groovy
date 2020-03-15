@@ -1,10 +1,10 @@
 package GPP_Demos.nbody
 
-import GPP_Library.DataClassInterface as constants
+import groovyParallelPatterns.DataClassInterface as constants
 import groovy.transform.CompileStatic
 
 @CompileStatic
-class NbodyResults extends GPP_Library.DataClass {
+class NbodyResults extends groovyParallelPatterns.DataClass {
 
   String printFileName = ""
   PrintWriter printWriter = null

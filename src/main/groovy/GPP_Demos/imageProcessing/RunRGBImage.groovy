@@ -3,11 +3,11 @@ package GPP_Demos.imageProcessing
 import jcsp.lang.*
 import groovyJCSP.*
  
-import GPP_Library.DataDetails
-import GPP_Library.ResultDetails
-import GPP_Library.functionals.matrix.StencilEngine
-import GPP_Library.functionals.matrix.Matrix
-import GPP_Library.terminals.*
+import groovyParallelPatterns.DataDetails
+import groovyParallelPatterns.ResultDetails
+import groovyParallelPatterns.functionals.matrix.StencilEngine
+import groovyParallelPatterns.functionals.matrix.Matrix
+import groovyParallelPatterns.terminals.*
 import GPP_Demos.imageProcessing.CompositeARGBImage as img
 import GPP_Demos.imageProcessing.CompositeARGBResult as imgRslt
  
@@ -22,8 +22,8 @@ String inFile
 String outFile
 if (args.size() == 0){
 nodes = 16
-inFileName = "DSC_0120-001.jpg"
-outFileName = "DSC_0120_001_RGB_${nodes}_K6_K6.jpg"
+inFileName = "DSC_0120.jpg"
+outFileName = "DSC_0120_RGB_${nodes}_K6_K6.jpg.jpg"
 inFile = "./$inFileName"
 outFile = "./$outFileName"
 }
@@ -31,7 +31,7 @@ else {
 nodes = Integer.parseInt(args[1])
 String folder = args[0]
 inFileName = "DSC_0120.jpg"
-outFileName = "DSC_0120_RGB_${nodes}_K6_K6.jpg"
+outFileName = "DSC_0120_RGB_${nodes}_K6_K6.jpg.jpg"
 inFile = workingDirectory + "/src/main/groovy/GPP_Demos/${folder}/$inFileName"
 outFile = workingDirectory + "/src/main/groovy/GPP_Demos/${folder}/$outFileName"
 }

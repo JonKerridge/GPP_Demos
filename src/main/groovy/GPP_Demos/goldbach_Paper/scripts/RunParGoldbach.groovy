@@ -3,16 +3,16 @@ package GPP_Demos.goldbach_Paper.scripts
 import jcsp.lang.*
 import groovyJCSP.*
  
-import GPP_Library.DataDetails
-import GPP_Library.GroupDetails
-import GPP_Library.LocalDetails
-import GPP_Library.ResultDetails
-import GPP_Library.connectors.reducers.ListSeqOne
-import GPP_Library.connectors.spreaders.OneParCastList
-import GPP_Library.functionals.groups.ListGroupList
-import GPP_Library.terminals.Collect
-import GPP_Library.terminals.EmitWithLocal
-import GPP_Library.functionals.workers.ThreePhaseWorker
+import groovyParallelPatterns.DataDetails
+import groovyParallelPatterns.GroupDetails
+import groovyParallelPatterns.LocalDetails
+import groovyParallelPatterns.ResultDetails
+import groovyParallelPatterns.connectors.reducers.ListSeqOne
+import groovyParallelPatterns.connectors.spreaders.OneParCastList
+import groovyParallelPatterns.functionals.groups.ListGroupList
+import groovyParallelPatterns.terminals.Collect
+import groovyParallelPatterns.terminals.EmitWithLocal
+import groovyParallelPatterns.functionals.workers.ThreePhaseWorker
 import GPP_Demos.goldbach_Paper.data.Prime as p
 import GPP_Demos.goldbach_Paper.data.ResultantPrimes as rp
 import GPP_Demos.goldbach_Paper.data.Sieve as s

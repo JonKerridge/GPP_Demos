@@ -3,6 +3,7 @@ package GPP_Demos.concordance
 import groovyParallelPatterns.DataDetails
 import groovyParallelPatterns.ResultDetails
 import groovyParallelPatterns.functionals.pipelines.OnePipelineOne
+import groovyParallelPatterns.patterns.TaskParallelPattern
 import groovyParallelPatterns.terminals.Collect
 import groovyParallelPatterns.terminals.Emit
 
@@ -24,7 +25,7 @@ if (args.size() == 0){
   // assumed to be running form within Intellij
   title = "bible"
   fileName = "./${title}.txt"
-  outFileName = "./${title}EPC"
+  outFileName = "./${title}TPP"
   doFileOutput = false
   N = 8
 }
@@ -52,17 +53,16 @@ def rDetails = new ResultDetails( rName: cr.getName(),
     rFinaliseData: [null])
 
 System.gc()
-print "EPC, $doFileOutput, $title, $N, "
+print "TPP, $doFileOutput, $title, $N, "
 
 def startime = System.currentTimeMillis()
 
-
-def emitter = new Emit( eDetails: dDetails)
-
-def pipe = new OnePipelineOne(stages : 3,
-    stageOp: [cd.valueList, cd.indicesMap, cd.wordsMap])
-
-def collector = new Collect(rDetails: rDetails)
+def tpp = new TaskParallelPattern(
+    eDetails: dDetails,
+    rDetails: rDetails,
+    stages : 3,
+    stageOp: [cd.valueList, cd.indicesMap, cd.wordsMap]
+)
 
 def endtime = System.currentTimeMillis()
 println " ${endtime - startime} "

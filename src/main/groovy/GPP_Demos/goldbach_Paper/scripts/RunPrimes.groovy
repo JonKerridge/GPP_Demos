@@ -3,12 +3,12 @@ package GPP_Demos.goldbach_Paper.scripts
 import jcsp.lang.*
 import groovyJCSP.*
  
-import GPP_Library.DataDetails
-import GPP_Library.LocalDetails
-import GPP_Library.ResultDetails
-import GPP_Library.functionals.workers.Worker
-import GPP_Library.terminals.Collect
-import GPP_Library.terminals.EmitWithLocal
+import groovyParallelPatterns.DataDetails
+import groovyParallelPatterns.LocalDetails
+import groovyParallelPatterns.ResultDetails
+import groovyParallelPatterns.functionals.workers.Worker
+import groovyParallelPatterns.terminals.Collect
+import groovyParallelPatterns.terminals.EmitWithLocal
 import GPP_Demos.goldbach_Paper.data.Prime as p
 import GPP_Demos.goldbach_Paper.data.Sieve as s
 import GPP_Demos.goldbach_Paper.data.PartitionedPrimeList as ppl
@@ -21,7 +21,7 @@ int maxN = 0
 int pWorkers = 1    // number of prime workers
  
 if (args.size() == 0){
-maxN = 1000000000
+maxN = 100000
 }
 else {
 maxN = Integer.parseInt(args[0])

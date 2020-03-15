@@ -4,11 +4,11 @@ import jcsp.lang.*
 import groovyJCSP.*
  
 import GPP_Demos.solarSystem.PlanetrySystem as ps
-import GPP_Library.DataDetails
-import GPP_Library.ResultDetails
-import GPP_Library.functionals.matrix.MultiCoreEngine
-import GPP_Library.terminals.Collect
-import GPP_Library.terminals.Emit
+import groovyParallelPatterns.DataDetails
+import groovyParallelPatterns.ResultDetails
+import groovyParallelPatterns.functionals.matrix.MultiCoreEngine
+import groovyParallelPatterns.terminals.Collect
+import groovyParallelPatterns.terminals.Emit
 import GPP_Demos.solarSystem.PlanetryResult as pr
  
 

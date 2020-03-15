@@ -1,6 +1,6 @@
 package GPP_Demos.concordance
 
-import GPP_Library.DataClass
+import groovyParallelPatterns.DataClass
 
 class ConcordanceWords extends DataClass {
   def punctuatedWords = []
@@ -76,7 +76,7 @@ class ConcordanceWords extends DataClass {
   }
 
   /* (non-Javadoc)
-   * @see jcsp.GPP_Library.DataClass#createInstance(java.lang.Object)
+   * @see jcsp.groovyParallelPatterns.DataClass#createInstance(java.lang.Object)
    */
   public int createInstance (List d) {
     punctuatedWords = createBuffer(fileReader, maxBufferSize)

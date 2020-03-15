@@ -1,10 +1,8 @@
 package GPP_Demos.goldbach_Book.data
 
-import GPP_Library.DataClass
+import groovyParallelPatterns.DataClass
 
 class PrimeListMCE extends DataClass{
-
-  // this version of PrimeList is used solely in the SeqGoldbach version
 
   List <Integer> listOfPrimes
   // these variables are used for the Goldbach analysis
@@ -15,13 +13,11 @@ class PrimeListMCE extends DataClass{
   List partitionData
   List goldbachOutcome
 
-
-
   static String initPrimeList = "initPrimes"
   static String createPrimeList = "createPrimes"
   static String partitionGoldbachSpace = "partition"
   static String goldbachDetermination = "findGoldbach"
-  static String goldbachUpdate = "update"
+  static String goldbachUpdate = "update" //required by MCE but just returns
 
   int initPrimes(List d){
     listOfPrimes = []
@@ -38,7 +34,7 @@ class PrimeListMCE extends DataClass{
           listOfPrimes << i + s.offset
     }
     maxPrime = listOfPrimes[listOfPrimes.size() - 1]
-    maxGoldbach = maxPrime * 2
+//    maxGoldbach = maxPrime * 2
     return completedOK
   }
 

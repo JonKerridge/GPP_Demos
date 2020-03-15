@@ -3,12 +3,12 @@ package GPP_Demos.mandelbrot.scripts
 import jcsp.lang.*
 import groovyJCSP.*
  
-import GPP_Library.connectors.reducers.AnyFanOne
-import GPP_Library.connectors.spreaders.OneFanAny
-import GPP_Library.functionals.groups.AnyGroupAny
-import GPP_Library.terminals.Collect
-import GPP_Library.terminals.Emit
-import GPP_Library.*
+import groovyParallelPatterns.connectors.reducers.AnyFanOne
+import groovyParallelPatterns.connectors.spreaders.OneFanAny
+import groovyParallelPatterns.functionals.groups.AnyGroupAny
+import groovyParallelPatterns.terminals.Collect
+import groovyParallelPatterns.terminals.Emit
+import groovyParallelPatterns.*
  
 import GPP_Demos.mandelbrot.data.MandelbrotLine as ml
 import GPP_Demos.mandelbrot.data.MandelbrotLineCollect as mlc
@@ -89,7 +89,7 @@ def collector = new Collect(
     // no output channel required
     rDetails: resultDetails)
 
-PAR network
+PAR network = new PAR()
  network = new PAR([emit , spread , group , reduce , collector ])
  network.run()
  network.removeAllProcesses()

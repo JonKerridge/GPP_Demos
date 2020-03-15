@@ -3,9 +3,9 @@ package GPP_Demos.mandelbrot.cluster
 import jcsp.net2.tcpip.TCPIPNodeAddress
 import jcsp.net2.*
 import jcsp.net2.mobile.*
-import GPP_Library.UniversalSignal
-import GPP_Library.cluster.NodeNetwork
-import GPP_Library.cluster.RequestNodeNetwork
+import groovyParallelPatterns.UniversalSignal
+import groovyParallelPatterns.cluster.NodeNetwork
+import groovyParallelPatterns.cluster.RequestNodeNetwork
 import groovyJCSP.*
 
 int nodes = 2					// must be greater than 1

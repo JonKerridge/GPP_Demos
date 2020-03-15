@@ -1,6 +1,6 @@
 package GPP_Demos.mandelbrot.cluster
 
-class SerializedMandelbrotLine  extends GPP_Library.DataClass {
+class SerializedMandelbrotLine  extends groovyParallelPatterns.DataClass {
   int []colour		// array of colour values for this line
   double [][] line 	// array of [x,y] values for this line
   int ly = 0			// y coordinate of line

@@ -2,7 +2,7 @@ package GPP_Demos.mandelbrot.scripts
 
 import GPP_Demos.mandelbrot.data.MandelbrotLine
 import GPP_Demos.mandelbrot.data.MandelbrotLineCollect
-import GPP_Library.DataClass as Constants
+import groovyParallelPatterns.DataClass as Constants
 
 // usage runDemo mandelbrot/scripts SeqMbrot resultsFile maxInterations width height pixeldelta
 

@@ -1,6 +1,6 @@
 package GPP_Demos.mceSort
 
-import GPP_Library.DataClass
+import groovyParallelPatterns.DataClass
 
 class MCEsortData extends DataClass {
   String inFileName = ""
@@ -14,9 +14,8 @@ class MCEsortData extends DataClass {
 
   static BufferedReader reader = null
   static BufferedWriter writer = null
-  int nodes
-  int recordSize
-  List<List<Integer>> partitionRanges = []  // a list of 'nodes' partition starts and ends
+  int nodes, recordSize
+  List<List<Integer>> partitionRanges = []  // a list of 'nodes' partition [starts, ends]
 
   int init(List d) { //[input-file-name (include path), output-file-name]
     File inFile = new File((String) d[0])
@@ -108,11 +107,6 @@ class MCEsortData extends DataClass {
   } // partition
 
   void checkPartsSorted() {
-//    int i = 0
-//    records.each{rec ->
-//      println "$i: $rec"
-//      i = i + 1
-//    }
     for (n in 0..<nodes) {
       int start = partitionRanges[n][0]
       int last = partitionRanges[n][1] - 1
@@ -121,6 +115,7 @@ class MCEsortData extends DataClass {
       }
     }
   }
+
   // called from collector method in MCEsortResult
   void mergeParts() {
     if (nodes == 1) {

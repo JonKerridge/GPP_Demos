@@ -3,7 +3,7 @@ package GPP_Demos.QuickSortIntegers
 import groovy.transform.CompileStatic
 
 @CompileStatic
-class QSResult extends GPP_Library.DataClass {
+class QSResult extends groovyParallelPatterns.DataClass {
 
   boolean overall = true
   static String init = "initClass"

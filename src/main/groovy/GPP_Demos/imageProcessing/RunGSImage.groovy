@@ -3,11 +3,11 @@ package GPP_Demos.imageProcessing
 import jcsp.lang.*
 import groovyJCSP.*
  
-import GPP_Library.DataDetails
-import GPP_Library.ResultDetails
-import GPP_Library.functionals.matrix.StencilEngine
-import GPP_Library.functionals.matrix.Matrix
-import GPP_Library.terminals.*
+import groovyParallelPatterns.DataDetails
+import groovyParallelPatterns.ResultDetails
+import groovyParallelPatterns.functionals.matrix.StencilEngine
+import groovyParallelPatterns.functionals.matrix.Matrix
+import groovyParallelPatterns.terminals.*
 import GPP_Demos.imageProcessing.CompositeGSImage as img
 import GPP_Demos.imageProcessing.CompositeGSResult as imgRslt
  
@@ -16,7 +16,7 @@ import GPP_Demos.imageProcessing.CompositeGSResult as imgRslt
  
 int nodes
 String workingDirectory = System.getProperty('user.dir')
-String inFileName = "DSC_0120-001.jpg"
+String inFileName = "DSC_0120.jpg"
 String outFileName = "DSC_0120_GS_${nodes}_K4_K4_K1.jpg"
 String inFile
 String outFile

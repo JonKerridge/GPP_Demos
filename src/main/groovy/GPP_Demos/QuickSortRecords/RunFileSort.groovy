@@ -5,14 +5,14 @@ import groovyJCSP.*
  
 import GPP_Demos.QuickSortIntegers.QSData
 import GPP_Demos.QuickSortIntegers.QSWorker
-import GPP_Library.DataDetails
-import GPP_Library.LocalDetails
-import GPP_Library.ResultDetails
-import GPP_Library.connectors.reducers.N_WayMerge
-import GPP_Library.connectors.spreaders.OneFanList
-import GPP_Library.functionals.groups.ListThreePhaseWorkerList
-import GPP_Library.terminals.Collect
-import GPP_Library.terminals.Emit
+import groovyParallelPatterns.DataDetails
+import groovyParallelPatterns.LocalDetails
+import groovyParallelPatterns.ResultDetails
+import groovyParallelPatterns.connectors.reducers.N_WayMerge
+import groovyParallelPatterns.connectors.spreaders.OneFanList
+import groovyParallelPatterns.functionals.groups.ListThreePhaseWorkerList
+import groovyParallelPatterns.terminals.Collect
+import groovyParallelPatterns.terminals.Emit
  
 
 //usage runDemo QuickSortRecords RunFileSort resultsFile workers inFile, outFile

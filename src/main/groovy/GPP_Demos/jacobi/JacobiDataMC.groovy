@@ -1,14 +1,14 @@
 package GPP_Demos.jacobi
 
-import GPP_Library.DataClass
+import groovyParallelPatterns.DataClass
 import groovy.transform.CompileStatic
-import GPP_Library.functionals.matrix.Matrix
-import GPP_Library.functionals.matrix.Vector
+import groovyParallelPatterns.functionals.matrix.Matrix
+import groovyParallelPatterns.functionals.matrix.Vector
 
 @CompileStatic
 class JacobiDataMC extends DataClass {
 
-  public Matrix M = null         // imported from GPP_Library.functionals.matrix.Matrix
+  public Matrix M = null         // imported from groovyParallelPatterns.functionals.matrix.Matrix
   Vector solution = null  // as above
   static String initMethod = "init"
   static String createMethod = "create"

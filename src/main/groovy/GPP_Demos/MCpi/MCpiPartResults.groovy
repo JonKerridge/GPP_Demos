@@ -1,7 +1,7 @@
 package GPP_Demos.MCpi
 
 
-class MCpiPartResults extends GPP_Library.DataClass {
+class MCpiPartResults extends groovyParallelPatterns.DataClass {
   def piValue
   static int iterationSum = 0
   static int withinSum = 0

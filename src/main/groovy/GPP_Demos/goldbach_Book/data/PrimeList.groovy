@@ -1,6 +1,6 @@
 package GPP_Demos.goldbach_Book.data
 
-import GPP_Library.DataClass
+import groovyParallelPatterns.DataClass
 
 class PrimeList extends DataClass{
 

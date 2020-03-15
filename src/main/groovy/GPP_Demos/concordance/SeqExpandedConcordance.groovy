@@ -1,7 +1,7 @@
 package GPP_Demos.concordance
 
-import GPP_Library.DataClass
-import GPP_Library.DataClassInterface
+import groovyParallelPatterns.DataClass
+import groovyParallelPatterns.DataClassInterface
 
 //usage runDemo concordance SeqExpandedConcordance resultFile  title N blockSize
 
