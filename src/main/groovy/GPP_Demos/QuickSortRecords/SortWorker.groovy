@@ -29,10 +29,12 @@ public class SortWorker extends DataClass{
   }
 
   int currentIndex = 0
+  String keyfield
 
   Record oFunc() {
     if (currentIndex < recordBuffer.size()){
       Record o = recordBuffer[currentIndex]
+      this.keyfield = o.keyField
       currentIndex = currentIndex + 1
       return o
     }

@@ -16,7 +16,7 @@ version '1.0.3'
 def jcspLib = "C:/jcspLib"
 def gppLibraryJarFile = "groovyParallelPatterns-1.0.6.jar"
 
-def gppBuilderJarFile = "GPP_Builder-1.0.6.jar"
+def gppBuilderJarFile = "gppBuilder-1.0.6.jar"
 
 println "using gppLibrary library $jcspLib\\$gppLibraryJarFile"
 println "using gppBuilder library $jcspLib\\$gppBuilderJarFile"
@@ -42,12 +42,9 @@ mainClassName = "gppVis/Viualiser/org.openjfx.MainApp"
 
 
 dependencies {
-  compile 'org.codehaus.groovy:groovy-all:3.0.2'
-//    compile 'javax.xml.bind:jaxb-api:2.3.0'
+  compile 'org.codehaus.groovy:groovy-all:3.0.4'
   compile group: 'javax.xml.bind', name: 'jaxb-api', version: '2.3.0'
-//  compile 'org.codehaus.groovy:groovy-all:2.5.3'
   compile 'cspforjava:jcsp:1.1.0'
-//  compile 'groovyJCSP:groovyJCSP:1.1.2'
   compile 'groovyJCSP:groovyJCSP:1.1.3'
 // to include javafx  into  compile 
   compile "org.openjfx:javafx-base:11:win"
@@ -56,7 +53,7 @@ dependencies {
 
   compile fileTree(dir: "$jcspLib", include: ["$gppLibraryJarFile"])
   compile fileTree(dir: "$jcspLib", include: ["$gppBuilderJarFile"])
-  testCompile 'org.codehaus.groovy:groovy-all:3.0.2'
+  testCompile 'org.codehaus.groovy:groovy-all:3.0.4'
 //  testCompile 'org.codehaus.groovy:groovy-all:2.5.3'
   testCompile group: 'junit', name: 'junit', version: '4.12'
   testCompile 'cspforjava:jcsp:1.1.0'

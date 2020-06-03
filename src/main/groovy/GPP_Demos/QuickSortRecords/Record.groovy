@@ -4,6 +4,7 @@ import groovyParallelPatterns.DataClass
 
 public class Record extends DataClass{
   String dataField
+  String keyField
 
   static String initFile = "init"
   static String createRecord = "create"
@@ -21,6 +22,7 @@ public class Record extends DataClass{
     String line = reader.readLine()
     if (line == null) return normalTermination
     dataField = line
+    keyField = dataField[0..9]
     return normalContinuation
   }
 

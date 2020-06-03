@@ -16,9 +16,12 @@ class ResultOutput extends DataClass{
     return completedOK
   }
 
+  String keyField
+
   int readRecord(Record r){
     String s = "${r.dataField}"
     writer.writeLine(s)
+    keyField = s[0..9]
     return completedOK
   }
 

@@ -1,6 +1,6 @@
 package GPP_Demos
 
-import GPP_Builder.GPPbuilder
+import gppBuilder.GPPbuilder
 
 def build = new GPPbuilder()
 String rootPath = "./"  // as required for use in Intellij
@@ -46,6 +46,8 @@ build.runBuilder(rootPath + "MCpi\\RunMCpiDataParallel")
 build.runBuilder(rootPath + "MCpi\\RunMCpiWorkerDataParallel")
 //mceSort
 build.runBuilder(rootPath + "mceSort\\RunMCEsort")
-
+// quick sorts
+build.runBuilder(rootPath + "QuickSortRecords\\RunFileSort")
+build.runBuilder(rootPath + "QuickSortRecords\\RunFileSortVis")
 
 
