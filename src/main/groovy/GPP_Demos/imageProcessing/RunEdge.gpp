@@ -1,0 +1,80 @@
+package GPP_Demos.imageProcessing
+
+import groovyParallelPatterns.DataDetails
+import groovyParallelPatterns.ResultDetails
+import groovyParallelPatterns.functionals.matrix.StencilEngine
+import groovyParallelPatterns.functionals.matrix.Matrix
+import groovyParallelPatterns.terminals.*
+import GPP_Demos.imageProcessing.CompositeGSImage as img
+import GPP_Demos.imageProcessing.CompositeGSResult as imgRslt
+
+//usage runDemo imageProcessing RunGSImage resultsFile nodes jpgFileName
+
+int nodes
+String workingDirectory = System.getProperty('user.dir')
+String inFileName
+String outFileName
+String inFile
+String outFile
+if (args.size() == 0){
+    nodes = 16
+    inFileName = "DSC_7610_4096.jpg"
+    outFileName = "DSC_7610_4096_${nodes}_Edge.jpg"
+    inFile = "./$inFileName"
+    outFile = "./$outFileName"
+}
+else {
+    nodes = Integer.parseInt(args[1])
+    String folder = args[0]
+    inFileName = args[2]
+    outFileName = inFileName + "_${nodes}_Edge1_K1"
+    inFile = workingDirectory + "/src/main/groovy/GPP_Demos/${folder}/${inFileName}.jpg"
+    outFile = workingDirectory + "/src/main/groovy/GPP_Demos/${folder}/${outFileName}.jpg"
+}
+
+//edge 1
+Matrix kernel1 = new Matrix(rows: 3, columns: 3)
+kernel1.entries = new int[3][3]
+kernel1.setByRow([-1, -1, -1], 0)
+kernel1.setByRow([-1,  8, -1], 1)
+kernel1.setByRow([-1, -1, -1], 2)
+//edge 2
+Matrix kernel2 = new Matrix(rows: 5, columns: 5)
+kernel2.entries = new int[5][5]
+kernel2.setByRow([ -1, -1, -1,  -1, -1], 0)
+kernel2.setByRow([ -1, -1, -1,  -1, -1], 1)
+kernel2.setByRow([ -1, -1, 24,  -1, -1], 2)
+kernel2.setByRow([ -1, -1, -1,  -1, -1], 3)
+kernel2.setByRow([ -1, -1, -1,  -1, -1], 4)
+
+def emitDetails = new DataDetails( dName: img.getName(),
+                                   dInitMethod: img.initMethod,
+                                   dCreateMethod: img.createMethod,
+                                   dCreateData: [inFile, outFile])
+
+def resultDetails = new ResultDetails( rName: imgRslt.getName(),
+                                       rInitMethod: imgRslt.initMethod,
+                                       rCollectMethod: imgRslt.collectMethod,
+                                       rFinaliseMethod: imgRslt.finaliseMethod )
+
+System.gc()
+print "Edge, $nodes, $inFileName, "
+long startTime = System.currentTimeMillis()
+
+def emit = new Emit(eDetails: emitDetails)
+// greyscale
+def engine1 = new StencilEngine( nodes : nodes,
+                               partitionMethod: img.partitionMethod,
+                               functionMethod: img.greyScaleMethod )
+//edge detect
+def engine2 = new StencilEngine( nodes: nodes,
+                               convolutionMethod: img.convolutionMethod,
+                               convolutionData: [kernel1, 1, 0],
+                               updateImageIndexMethod: img.updateImageIndex )
+
+def collector = new Collect( rDetails: resultDetails)
+
+long endTime = System.currentTimeMillis()
+println " ${endTime - startTime}"
+
+

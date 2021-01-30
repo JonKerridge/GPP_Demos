@@ -16,8 +16,8 @@ import GPP_Demos.imageProcessing.CompositeGSResult as imgRslt
  
 int nodes
 String workingDirectory = System.getProperty('user.dir')
-String inFileName = "DSC_0120.jpg"
-String outFileName = "DSC_0120_GS_${nodes}_K4_K4_K1.jpg"
+String inFileName = "Lenna.jpg"
+String outFileName = "Lenna_${nodes}_K4_K4_K1.jpg"
 String inFile
 String outFile
 if (args.size() == 0){

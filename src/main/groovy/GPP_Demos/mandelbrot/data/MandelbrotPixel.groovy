@@ -52,18 +52,18 @@ class MandelbrotPixel  extends groovyParallelPatterns.DataClass {
     return normalContinuation
   }
 
-  @Override
-  def serialize(){
-    def smp = new SerializedMandelbrotPixel()
-    smp.px = this.px
-    smp.py = this.py
-    smp.x = this.x
-    smp.y = this.y
-    smp.colour = this.colour
-    smp.maxIterations = this.maxIterations
-    smp.calcColour = this.calcColour
-    return smp
-  }
+//  @Override  // removed with version groovyParallelPatterns.1.0.9
+//  def serialize(){
+//    def smp = new SerializedMandelbrotPixel()
+//    smp.px = this.px
+//    smp.py = this.py
+//    smp.x = this.x
+//    smp.y = this.y
+//    smp.colour = this.colour
+//    smp.maxIterations = this.maxIterations
+//    smp.calcColour = this.calcColour
+//    return smp
+//  }
 
 
   int calcColour (List d) {

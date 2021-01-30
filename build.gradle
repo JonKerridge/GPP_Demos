@@ -40,11 +40,11 @@ mainClassName = "gppVis/Viualiser/org.openjfx.MainApp"
 
 
 dependencies {
-  compile 'org.codehaus.groovy:groovy-all:3.0.4'
+  compile 'org.codehaus.groovy:groovy-all:3.0.6'
   compile group: 'javax.xml.bind', name: 'jaxb-api', version: '2.3.0'
   compile 'cspforjava:jcsp:1.1.0'
   compile 'groovyJCSP:groovyJCSP:1.1.3'
-  compile "groovyParallelPatterns:groovyParallelPatterns:1.0.6"
+  compile "groovyParallelPatterns:groovyParallelPatterns:1.0.9"
   compile "gppBuilder:gppBuilder:1.0.6"
 // to include javafx  into  compile
   compile "org.openjfx:javafx-base:11:win"

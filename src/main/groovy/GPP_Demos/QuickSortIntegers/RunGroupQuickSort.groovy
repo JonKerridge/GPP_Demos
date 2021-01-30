@@ -23,7 +23,7 @@ int workers
 int instances
 if (args.size() == 0) {
 workers = 4
-instances = 5000
+instances = 8096
 } else {
 //    String folder = args[0] not used
 workers = Integer.parseInt(args[1])

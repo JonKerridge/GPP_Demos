@@ -47,19 +47,7 @@ class MandelbrotLine extends groovyParallelPatterns.DataClass {
     return normalContinuation
   }
 
-  @Override
-  def serialize(){
-    def sml = new SerializedMandelbrotLine()
-    sml.colour = this.colour
-    sml.line = this.line
-    sml.ly = this.ly
-    sml.width = this.width
-    sml.WHITE = this.WHITE
-    sml.BLACK = this.BLACK
-    sml.maxIterations = this.maxIterations
-    return sml
-  }
-  
+  //removed with version groovyParallelPatterns.1.0.9
   // based on algorithm at https://en.wikipedia.org/wiki/Mandelbrot_set
 
   int calcColour (List d){

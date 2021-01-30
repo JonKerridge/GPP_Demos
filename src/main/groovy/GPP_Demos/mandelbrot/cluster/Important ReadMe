@@ -1,0 +1,15 @@
+Please note and do not ignore.
+
+This version of programming a cluster of workstations is now strongly deprecated!
+
+A new system that uses a dedicated clusterBuilder and associated DSL is now available.
+
+This versionwas used in the paper called
+Groovy Parallel Patterns: A Process Oriented Parallelization Library
+by Kerridge and Urquhart
+
+The cluaterBuilder version has no need of a serialize method and thus these methods have
+been commented out in this text.
+
+It is crucial that groovyParallelPatterns.1.0.9 onwards is used to compile programs using
+the library.
