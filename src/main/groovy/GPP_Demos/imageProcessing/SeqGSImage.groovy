@@ -1,6 +1,6 @@
 package GPP_Demos.imageProcessing
 
-import groovyParallelPatterns.functionals.matrix.Matrix
+import groovy_parallel_patterns.functionals.matrix.Matrix
 import GPP_Demos.imageProcessing.CompositeGSImage as img
 import GPP_Demos.imageProcessing.CompositeGSResult as imgRslt
 

@@ -3,14 +3,14 @@ package GPP_Demos.QuickSortIntegers
 import GPP_Demos.QuickSortIntegers.QSData as qsd
 import GPP_Demos.QuickSortIntegers.QSResult as qsr
 import GPP_Demos.QuickSortIntegers.QSWorker as qsw
-import groovyParallelPatterns.DataDetails
-import groovyParallelPatterns.LocalDetails
-import groovyParallelPatterns.ResultDetails
-import groovyParallelPatterns.connectors.reducers.N_WayMerge
-import groovyParallelPatterns.connectors.spreaders.OneDirectedList
-import groovyParallelPatterns.functionals.groups.ListThreePhaseWorkerList
-import groovyParallelPatterns.terminals.Collect
-import groovyParallelPatterns.terminals.Emit
+import groovy_parallel_patterns.DataDetails
+import groovy_parallel_patterns.LocalDetails
+import groovy_parallel_patterns.ResultDetails
+import groovy_parallel_patterns.connectors.reducers.N_WayMerge
+import groovy_parallel_patterns.connectors.spreaders.OneDirectedList
+import groovy_parallel_patterns.functionals.groups.ListThreePhaseWorkerList
+import groovy_parallel_patterns.terminals.Collect
+import groovy_parallel_patterns.terminals.Emit
 
 //usage runDemo QuickSortIntegers RunGroupQuickSort resultsFile workers instances
 

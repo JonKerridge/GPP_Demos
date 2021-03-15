@@ -3,7 +3,7 @@ package GPP_Demos.mandelbrot.data
 //import GPP_Demos.mandelbrot.cluster.SerializedMandelbrotPixel
 import GPP_Demos.mandelbrot.cluster.*
 
-class MandelbrotPixel  extends groovyParallelPatterns.DataClass {
+class MandelbrotPixel  extends groovy_parallel_patterns.DataClass {
   int px, py, colour = -1
   double x, y
   static int maxIterations = 500
@@ -52,7 +52,7 @@ class MandelbrotPixel  extends groovyParallelPatterns.DataClass {
     return normalContinuation
   }
 
-//  @Override  // removed with version groovyParallelPatterns.1.0.9
+//  @Override  // removed with version groovy_parallel_patterns.1.0.9
 //  def serialize(){
 //    def smp = new SerializedMandelbrotPixel()
 //    smp.px = this.px

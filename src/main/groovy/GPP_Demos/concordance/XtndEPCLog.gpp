@@ -4,17 +4,17 @@ import GPP_Demos.concordance.ConcordanceCombine as cc
 import GPP_Demos.concordance.ConcordanceData as cd
 import GPP_Demos.concordance.ConcordanceResults as cr
 import GPP_Demos.concordance.ConcordanceWords as cw
-import groovyParallelPatterns.DataDetails
-import groovyParallelPatterns.LocalDetails
-import groovyParallelPatterns.ResultDetails
-import groovyParallelPatterns.connectors.reducers.ListMergeOne
-import groovyParallelPatterns.connectors.spreaders.OneFanList
-import groovyParallelPatterns.functionals.groups.ListGroupList
-import groovyParallelPatterns.functionals.pipelines.OnePipelineOne
-import groovyParallelPatterns.functionals.transformers.CombineNto1
-import groovyParallelPatterns.terminals.Collect
-import groovyParallelPatterns.terminals.Emit
-import groovyParallelPatterns.terminals.EmitFromInput
+import groovy_parallel_patterns.DataDetails
+import groovy_parallel_patterns.LocalDetails
+import groovy_parallel_patterns.ResultDetails
+import groovy_parallel_patterns.connectors.reducers.ListMergeOne
+import groovy_parallel_patterns.connectors.spreaders.OneFanList
+import groovy_parallel_patterns.functionals.groups.ListGroupList
+import groovy_parallel_patterns.functionals.pipelines.OnePipelineOne
+import groovy_parallel_patterns.functionals.transformers.CombineNto1
+import groovy_parallel_patterns.terminals.Collect
+import groovy_parallel_patterns.terminals.Emit
+import groovy_parallel_patterns.terminals.EmitFromInput
 
 //usage runDemo concordance RunExtendedConcordance resultsFile title blockWorkers blocksize
 

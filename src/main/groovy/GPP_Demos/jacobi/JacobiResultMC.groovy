@@ -1,6 +1,6 @@
 package GPP_Demos.jacobi
 
-import groovyParallelPatterns.DataClass
+import groovy_parallel_patterns.DataClass
 import groovy.transform.CompileStatic
 
 @CompileStatic

@@ -1,11 +1,11 @@
 package GPP_Demos.mandelbrot.scripts
 
-import groovyParallelPatterns.connectors.reducers.AnyFanOne
-import groovyParallelPatterns.connectors.spreaders.OneFanAny
-import groovyParallelPatterns.functionals.groups.AnyGroupAny
-import groovyParallelPatterns.terminals.Collect
-import groovyParallelPatterns.terminals.Emit
-import groovyParallelPatterns.*
+import groovy_parallel_patterns.connectors.reducers.AnyFanOne
+import groovy_parallel_patterns.connectors.spreaders.OneFanAny
+import groovy_parallel_patterns.functionals.groups.AnyGroupAny
+import groovy_parallel_patterns.terminals.Collect
+import groovy_parallel_patterns.terminals.Emit
+import groovy_parallel_patterns.*
 
 import GPP_Demos.mandelbrot.data.MandelbrotLine as ml
 import GPP_Demos.mandelbrot.data.MandelbrotLineCollect as mlc

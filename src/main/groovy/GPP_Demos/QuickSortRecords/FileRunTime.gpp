@@ -1,9 +1,9 @@
 package GPP_Demos.QuickSortRecords
 
-import groovyParallelPatterns.DataDetails
-import groovyParallelPatterns.ResultDetails
-import groovyParallelPatterns.terminals.Collect
-import groovyParallelPatterns.terminals.Emit
+import groovy_parallel_patterns.DataDetails
+import groovy_parallel_patterns.ResultDetails
+import groovy_parallel_patterns.terminals.Collect
+import groovy_parallel_patterns.terminals.Emit
 
 def fileInPath = "D:\\QuickSortInputs\\"
 def fileOutPath = "D:\\QuickSortOutputs\\"

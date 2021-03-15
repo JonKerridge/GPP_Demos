@@ -3,7 +3,7 @@ package GPP_Demos.goldbach_Paper.data
 import groovy.transform.CompileStatic
 
 @CompileStatic
-class GoldbachParCollect extends groovyParallelPatterns.DataClass {
+class GoldbachParCollect extends groovy_parallel_patterns.DataClass {
 
   Map rangeMap = [:]
   static  int noOverlap = -100

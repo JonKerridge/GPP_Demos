@@ -1,10 +1,10 @@
 package GPP_Demos.mceSort
 
-import groovyParallelPatterns.DataDetails
-import groovyParallelPatterns.ResultDetails
-import groovyParallelPatterns.functionals.matrix.MultiCoreEngine
-import groovyParallelPatterns.terminals.Collect
-import groovyParallelPatterns.terminals.EmitSingle
+import groovy_parallel_patterns.DataDetails
+import groovy_parallel_patterns.ResultDetails
+import groovy_parallel_patterns.functionals.matrix.MultiCoreEngine
+import groovy_parallel_patterns.terminals.Collect
+import groovy_parallel_patterns.terminals.EmitSingle
 
 def fileInPath = "D:\\QuickSortInputs\\"
 def fileOutPath = "D:\\QuickSortOutputs\\"

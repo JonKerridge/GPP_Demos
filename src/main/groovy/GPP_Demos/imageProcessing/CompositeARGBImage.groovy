@@ -6,8 +6,8 @@ import java.awt.image.*
 
 import javax.imageio.ImageIO
 
-import groovyParallelPatterns.functionals.matrix.Matrix
-import groovyParallelPatterns.DataClass
+import groovy_parallel_patterns.functionals.matrix.Matrix
+import groovy_parallel_patterns.DataClass
 
 @CompileStatic
 class CompositeARGBImage extends DataClass{

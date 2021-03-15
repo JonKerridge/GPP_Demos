@@ -3,8 +3,8 @@ plugins {
   id 'java'
 }
 
-group 'GPP_Demos'
-version '1.1.11'
+group 'jonkerridge'
+version '1.1.12'
 // version 1.0.0 was the base version with the Builder reconfigured
 // so that many of the calls are just a call to a base version of the required connection
 // version 1.0.1 includes the Visualisation of matrix style engines
@@ -13,22 +13,52 @@ version '1.1.11'
 // version 1.0.6 uses groovy 3.0.4 and the uploaded groovyParallelPatterns
 //                and gppBuilder from bintray
 // version 1.1.11 loads from GitHub releases needs Java 11 and Groovy 3
+// version 1.1.12 uses packages with version number 1.1.9, 1.1.12, Java 11 and Groovy 3.0.7
 
 repositories {
+//  mavenLocal() for testing prior to package publication
   mavenCentral()
-  maven {
-    url "https://mvnrepository.com/artifact/org.codehaus.groovy/groovy-all"
+  maven { // to download the jonkerridge.groovy_jcsp library
+    name = "GitHub"
+    url = "https://maven.pkg.github.com/JonKerridge/groovyJCSP"
+    credentials {
+      username = project.findProperty("gpr.user")
+      password = project.findProperty("gpr.key")
+    }
   }
-  mavenLocal()
+  maven { // to download the cspforjava.jcsp library
+    name = "GitHub"
+    url = "https://maven.pkg.github.com/CSPforJAVA/jcsp"
+    credentials {
+      username = project.findProperty("gpr.user")
+      password = project.findProperty("gpr.key")
+    }
+  }
+  maven { // to download the jonkerridge.groovy_parallel_patterns library
+    name = "GitHub"
+    url = "https://maven.pkg.github.com/JonKerridge/GPP_Library"
+    credentials {
+      username = project.findProperty("gpr.user")
+      password = project.findProperty("gpr.key")
+    }
+  }
+    maven { // to download the jonkerridge.gpp_builder library
+      name = "GitHub"
+      url = "https://maven.pkg.github.com/JonKerridge/GPP_Builder"
+      credentials {
+        username = project.findProperty("gpr.user")
+        password = project.findProperty("gpr.key")
+      }
+    }
 }
 
 dependencies {
   implementation 'org.codehaus.groovy:groovy-all:3.0.7'
-  implementation 'cspforjava:jcsp:1.1.8'
-  implementation 'groovyJCSP:groovyJCSP:1.1.8'
-  implementation "groovyParallelPatterns:groovyParallelPatterns:1.1.11"
-  implementation "gppBuilder:gppBuilder:1.1.11"
-// to include javafx  into  compile required for groovyParallelPatterns
+  implementation 'cspforjava:jcsp:1.1.9'
+  implementation 'jonkerridge:groovy_jcsp:1.1.9'
+  implementation "jonkerridge:groovy_parallel_patterns:1.1.12"
+  implementation "jonkerridge:gpp_builder:1.1.12"
+// to include javafx  into  compile required for groovy_parallel_patterns
   implementation "org.openjfx:javafx-base:11:win"
   implementation "org.openjfx:javafx-graphics:11:win"
   implementation "org.openjfx:javafx-controls:11:win"

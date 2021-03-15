@@ -1,14 +1,14 @@
 package GPP_Demos.goldbach_Paper.scripts
 
-import groovyParallelPatterns.DataDetails
-import groovyParallelPatterns.GroupDetails
-import groovyParallelPatterns.LocalDetails
-import groovyParallelPatterns.ResultDetails
-import groovyParallelPatterns.connectors.reducers.ListSeqOne
-import groovyParallelPatterns.connectors.spreaders.OneSeqCastList
-import groovyParallelPatterns.functionals.groups.ListGroupList
-import groovyParallelPatterns.terminals.Collect
-import groovyParallelPatterns.terminals.EmitWithLocal
+import groovy_parallel_patterns.DataDetails
+import groovy_parallel_patterns.GroupDetails
+import groovy_parallel_patterns.LocalDetails
+import groovy_parallel_patterns.ResultDetails
+import groovy_parallel_patterns.connectors.reducers.ListSeqOne
+import groovy_parallel_patterns.connectors.spreaders.OneSeqCastList
+import groovy_parallel_patterns.functionals.groups.ListGroupList
+import groovy_parallel_patterns.terminals.Collect
+import groovy_parallel_patterns.terminals.EmitWithLocal
 import GPP_Demos.goldbach_Paper.data.Prime as p
 import GPP_Demos.goldbach_Paper.data.Sieve as s
 import GPP_Demos.goldbach_Paper.data.PartitionedPrimeList as ppl

@@ -20,7 +20,7 @@
  * user defined channel definitions and each process declares its input and output channels.  The version
  * ending '_gpp' does not define the channels nor the channel declarations in the process definitions.  The processes
  * have to be defined in the order in which they occur in the dataflow through the application solution.  The processes are preceded
- * by the annotation //NETWORK and terminated by //END NETWORK.  The program {@link jcsp.groovyParallelPatterns.build.GPPbuild} can then be used
+ * by the annotation //NETWORK and terminated by //END NETWORK.  The program {@link jcsp.groovy_parallel_patterns.build.GPPbuild} can then be used
  * to create the channel definitions, channel declarations and the required parallel constructor required to invoke the process network.<p>
  *
  *<pre>

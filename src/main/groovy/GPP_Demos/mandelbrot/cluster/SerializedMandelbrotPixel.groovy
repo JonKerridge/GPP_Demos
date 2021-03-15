@@ -1,6 +1,6 @@
 package GPP_Demos.mandelbrot.cluster
 
-class SerializedMandelbrotPixel  extends groovyParallelPatterns.DataClass {
+class SerializedMandelbrotPixel  extends groovy_parallel_patterns.DataClass {
   int px, py, colour = -1
   double x, y
   int maxIterations

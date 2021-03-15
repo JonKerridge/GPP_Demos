@@ -2,9 +2,9 @@ package GPP_Demos.MCpi
 
 import GPP_Demos.MCpi.MCpiData as piData
 import GPP_Demos.MCpi.MCpiResults as piResults
-import groovyParallelPatterns.DataDetails
-import groovyParallelPatterns.ResultDetails
-import groovyParallelPatterns.patterns.DataParallelPattern
+import groovy_parallel_patterns.DataDetails
+import groovy_parallel_patterns.ResultDetails
+import groovy_parallel_patterns.patterns.DataParallelPattern
 
 //usage runDemo MCpi RunMCpiDataParallel resultsFile workers instances iterations
 

@@ -1,6 +1,6 @@
 package GPP_Demos.goldbach_Book
 
-import gppBuilder.GPPbuilder
+import gpp_builder.GPPbuilder
 
 def build = new GPPbuilder()
 String rootPath = "./"  // as required for use in Intellij

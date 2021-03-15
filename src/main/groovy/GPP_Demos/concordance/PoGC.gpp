@@ -2,9 +2,9 @@ package GPP_Demos.concordance
 
 import GPP_Demos.concordance.ConcordanceData as cd
 import GPP_Demos.concordance.ConcordanceResults as cr
-import groovyParallelPatterns.DataDetails
-import groovyParallelPatterns.ResultDetails
-import groovyParallelPatterns.patterns.PipelineOfGroupCollectPattern
+import groovy_parallel_patterns.DataDetails
+import groovy_parallel_patterns.ResultDetails
+import groovy_parallel_patterns.patterns.PipelineOfGroupCollectPattern
 
 //usage runDemo concordance PoGC resultFile title workers doFileOutput
 

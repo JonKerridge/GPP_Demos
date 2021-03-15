@@ -6,7 +6,7 @@ package GPP_Demos.MCpi
  *
  */
 
-class MCpiPartData extends groovyParallelPatterns.DataClass {
+class MCpiPartData extends groovy_parallel_patterns.DataClass {
   int iterations = 0
   static int instance = 1
   static int  instances

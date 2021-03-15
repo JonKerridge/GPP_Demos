@@ -1,6 +1,6 @@
 package GPP_Demos.mandelbrot.data
 
-class MandelbrotCollect extends groovyParallelPatterns.DataClass {
+class MandelbrotCollect extends groovy_parallel_patterns.DataClass {
 
   int blackCount = 0
   int whiteCount = 0

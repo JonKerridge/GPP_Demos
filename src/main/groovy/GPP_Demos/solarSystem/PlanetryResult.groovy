@@ -1,10 +1,10 @@
 package GPP_Demos.solarSystem
 
 import groovy.transform.CompileStatic
-import groovyParallelPatterns.DataClassInterface as constants
+import groovy_parallel_patterns.DataClassInterface as constants
 
 @CompileStatic
-class PlanetryResult extends groovyParallelPatterns.DataClass {
+class PlanetryResult extends groovy_parallel_patterns.DataClass {
 
     String printFileName = ""
     PrintWriter printWriter = null

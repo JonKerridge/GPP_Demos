@@ -1,10 +1,10 @@
 package GPP_Demos
 
-import gppBuilder.GPPbuilder
+import gpp_builder.GPPbuilder
 
 def build = new GPPbuilder()
 String rootPath = "./"  // as required for use in Intellij
-// concordance
+//// concordance
 build.runBuilder(rootPath + "concordance\\EPC")
 build.runBuilder(rootPath + "concordance\\TPP")
 build.runBuilder(rootPath + "concordance\\EPCLog")
@@ -39,6 +39,8 @@ build.runBuilder(rootPath + "solarSystem\\RunPlanets")
 //image processing
 build.runBuilder(rootPath + "imageProcessing\\RunGSImage")
 build.runBuilder(rootPath + "imageProcessing\\RunRGBImage")
+build.runBuilder(rootPath + "imageProcessing\\RunEdge")
+build.runBuilder(rootPath + "imageProcessing\\RunEdge2")
 //mcpi
 build.runBuilder(rootPath + "MCpi\\RunSkelMCpi")
 build.runBuilder(rootPath + "MCpi\\RunSkelMCpiVisLog")

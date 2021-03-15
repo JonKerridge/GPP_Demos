@@ -2,7 +2,7 @@ package GPP_Demos.mandelbrot.data
 
 import GPP_Demos.mandelbrot.cluster.SerializedMandelbrotLine
 
-class MandelbrotLine extends groovyParallelPatterns.DataClass {
+class MandelbrotLine extends groovy_parallel_patterns.DataClass {
 
   int []colour		// array of colour values for this line
   double [][] line 	// array of [x,y] values for this line
@@ -47,7 +47,7 @@ class MandelbrotLine extends groovyParallelPatterns.DataClass {
     return normalContinuation
   }
 
-  //removed with version groovyParallelPatterns.1.0.9
+  //removed with version groovy_parallel_patterns.1.0.9
   // based on algorithm at https://en.wikipedia.org/wiki/Mandelbrot_set
 
   int calcColour (List d){

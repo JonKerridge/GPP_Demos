@@ -1,7 +1,7 @@
 package GPP_Demos.QuickSortRecords
 
 
-import groovyParallelPatterns.DataClass
+import groovy_parallel_patterns.DataClass
 
 public class SortWorker extends DataClass{
 

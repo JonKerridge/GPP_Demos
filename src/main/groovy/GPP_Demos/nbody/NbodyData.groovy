@@ -1,9 +1,9 @@
 package GPP_Demos.nbody
 
-import groovyParallelPatterns.DataClass
+import groovy_parallel_patterns.DataClass
 import groovy.transform.CompileStatic
-import groovyParallelPatterns.DataClassInterface as constants
-import groovyParallelPatterns.functionals.matrix.Matrix
+import groovy_parallel_patterns.DataClassInterface as constants
+import groovy_parallel_patterns.functionals.matrix.Matrix
 
 @CompileStatic
 class NbodyData extends DataClass {

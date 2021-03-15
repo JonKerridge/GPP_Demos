@@ -3,7 +3,7 @@ package GPP_Demos.goldbach_Paper.data
 import groovy.transform.CompileStatic
 
 @CompileStatic
-class Prime extends groovyParallelPatterns.DataClass {
+class Prime extends groovy_parallel_patterns.DataClass {
 
   int p
   static final String sievePrime = "sievePrime"

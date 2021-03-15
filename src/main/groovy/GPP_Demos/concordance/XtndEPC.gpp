@@ -1,17 +1,17 @@
 package GPP_Demos.concordance
 
-import groovyParallelPatterns.DataDetails
-import groovyParallelPatterns.LocalDetails
-import groovyParallelPatterns.ResultDetails
-import groovyParallelPatterns.connectors.reducers.ListFanOne
-import groovyParallelPatterns.connectors.reducers.ListMergeOne
-import groovyParallelPatterns.connectors.spreaders.OneFanAny
-import groovyParallelPatterns.connectors.spreaders.OneFanList
-import groovyParallelPatterns.functionals.composites.AnyGroupOfPipelineCollects
-import groovyParallelPatterns.functionals.groups.ListGroupList
-import groovyParallelPatterns.functionals.pipelines.OnePipelineOne
-import groovyParallelPatterns.terminals.*
-import groovyParallelPatterns.functionals.transformers.CombineNto1
+import groovy_parallel_patterns.DataDetails
+import groovy_parallel_patterns.LocalDetails
+import groovy_parallel_patterns.ResultDetails
+import groovy_parallel_patterns.connectors.reducers.ListFanOne
+import groovy_parallel_patterns.connectors.reducers.ListMergeOne
+import groovy_parallel_patterns.connectors.spreaders.OneFanAny
+import groovy_parallel_patterns.connectors.spreaders.OneFanList
+import groovy_parallel_patterns.functionals.composites.AnyGroupOfPipelineCollects
+import groovy_parallel_patterns.functionals.groups.ListGroupList
+import groovy_parallel_patterns.functionals.pipelines.OnePipelineOne
+import groovy_parallel_patterns.terminals.*
+import groovy_parallel_patterns.functionals.transformers.CombineNto1
 
 import GPP_Demos.concordance.ConcordanceWords as cw
 import GPP_Demos.concordance.ConcordanceCombine as cc

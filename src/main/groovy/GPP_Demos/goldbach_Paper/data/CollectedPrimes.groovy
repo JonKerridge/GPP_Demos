@@ -1,6 +1,6 @@
 package GPP_Demos.goldbach_Paper.data
 
-class CollectedPrimes extends groovyParallelPatterns.DataClass {
+class CollectedPrimes extends groovy_parallel_patterns.DataClass {
     
     List sieve = []
     List primes = []

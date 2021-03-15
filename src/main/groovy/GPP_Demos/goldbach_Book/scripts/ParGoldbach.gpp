@@ -1,16 +1,16 @@
 package GPP_Demos.goldbach_Book.scripts
 
-import groovyParallelPatterns.DataDetails
-import groovyParallelPatterns.GroupDetails
-import groovyParallelPatterns.LocalDetails
-import groovyParallelPatterns.ResultDetails
-import groovyParallelPatterns.connectors.reducers.ListMergeOne
-import groovyParallelPatterns.connectors.spreaders.OneSeqCastList
-import groovyParallelPatterns.functionals.groups.ListGroupList
-import groovyParallelPatterns.functionals.matrix.MultiCoreEngine
-import groovyParallelPatterns.functionals.transformers.CombineNto1
-import groovyParallelPatterns.terminals.Collect
-import groovyParallelPatterns.terminals.EmitWithLocal
+import groovy_parallel_patterns.DataDetails
+import groovy_parallel_patterns.GroupDetails
+import groovy_parallel_patterns.LocalDetails
+import groovy_parallel_patterns.ResultDetails
+import groovy_parallel_patterns.connectors.reducers.ListMergeOne
+import groovy_parallel_patterns.connectors.spreaders.OneSeqCastList
+import groovy_parallel_patterns.functionals.groups.ListGroupList
+import groovy_parallel_patterns.functionals.matrix.MultiCoreEngine
+import groovy_parallel_patterns.functionals.transformers.CombineNto1
+import groovy_parallel_patterns.terminals.Collect
+import groovy_parallel_patterns.terminals.EmitWithLocal
 import GPP_Demos.goldbach_Book.data.MCEResult
 import GPP_Demos.goldbach_Book.data.Prime
 import GPP_Demos.goldbach_Book.data.PrimeGenerator

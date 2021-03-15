@@ -1,7 +1,7 @@
 package GPP_Demos.goldbach_Paper.scripts
 
 import GPP_Demos.goldbach_Paper.data.*
-import groovyParallelPatterns.DataClassInterface as Constants
+import groovy_parallel_patterns.DataClassInterface as Constants
 
 def startime = System.currentTimeMillis()
 

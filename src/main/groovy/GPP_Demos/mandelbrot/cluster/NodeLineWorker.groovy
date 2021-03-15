@@ -1,10 +1,10 @@
 package GPP_Demos.mandelbrot.cluster
 
-import groovyParallelPatterns.cluster.NodeInterface
-import groovyParallelPatterns.cluster.connectors.NodeRequestingFanAny
-import groovyParallelPatterns.connectors.reducers.AnyFanOne
-import groovyParallelPatterns.functionals.groups.AnyGroupAny
-import groovyJCSP.*
+import groovy_parallel_patterns.cluster.NodeInterface
+import groovy_parallel_patterns.cluster.connectors.NodeRequestingFanAny
+import groovy_parallel_patterns.connectors.reducers.AnyFanOne
+import groovy_parallel_patterns.functionals.groups.AnyGroupAny
+import groovy_jcsp.*
 import jcsp.lang.*
 
 //import SerializedMandelbrotPixel as smp

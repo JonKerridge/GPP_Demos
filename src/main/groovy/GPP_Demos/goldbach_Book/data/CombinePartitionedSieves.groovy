@@ -1,6 +1,6 @@
 package GPP_Demos.goldbach_Book.data
 
-import groovyParallelPatterns.DataClass
+import groovy_parallel_patterns.DataClass
 
 class CombinePartitionedSieves extends DataClass{
 

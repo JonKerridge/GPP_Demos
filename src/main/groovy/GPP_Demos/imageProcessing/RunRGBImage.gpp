@@ -1,10 +1,10 @@
 package GPP_Demos.imageProcessing
 
-import groovyParallelPatterns.DataDetails
-import groovyParallelPatterns.ResultDetails
-import groovyParallelPatterns.functionals.matrix.StencilEngine
-import groovyParallelPatterns.functionals.matrix.Matrix
-import groovyParallelPatterns.terminals.*
+import groovy_parallel_patterns.DataDetails
+import groovy_parallel_patterns.ResultDetails
+import groovy_parallel_patterns.functionals.matrix.StencilEngine
+import groovy_parallel_patterns.functionals.matrix.Matrix
+import groovy_parallel_patterns.terminals.*
 import GPP_Demos.imageProcessing.CompositeARGBImage as img
 import GPP_Demos.imageProcessing.CompositeARGBResult as imgRslt
 

@@ -3,7 +3,7 @@ package GPP_Demos.goldbach_Paper.data
 import groovy.transform.CompileStatic
 
 @CompileStatic
-class ResultantPrimes extends groovyParallelPatterns.DataClass {
+class ResultantPrimes extends groovy_parallel_patterns.DataClass {
 
   List primes = [] // holds prime value from 2 upwards in index 0
   Map goldbachs = [:]   // holds the even numbers as key and a value comprising pairs of primes that sum to the key value

@@ -7,7 +7,7 @@ package GPP_Demos.MCpi
  *
  */
 
-class MCpiPartWorker extends groovyParallelPatterns.DataClass {
+class MCpiPartWorker extends groovy_parallel_patterns.DataClass {
   int iterations = -1000000
   int within = -1000000
   static final int errorState = -1

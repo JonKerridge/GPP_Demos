@@ -3,7 +3,7 @@ package GPP_Demos.goldbach_Paper.data
 import groovy.transform.CompileStatic
 
 @CompileStatic
-class PartitionedPrimeList extends groovyParallelPatterns.DataClass {
+class PartitionedPrimeList extends groovy_parallel_patterns.DataClass {
 
   List sieve = []
   int N, leftHand, rightHand

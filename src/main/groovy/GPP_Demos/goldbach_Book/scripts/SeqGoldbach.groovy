@@ -4,7 +4,7 @@ import GPP_Demos.goldbach_Book.data.CombinePartitionedSieves
 import GPP_Demos.goldbach_Book.data.PartitionedSieve
 import GPP_Demos.goldbach_Book.data.Prime
 import GPP_Demos.goldbach_Book.data.PrimeGenerator
-import groovyParallelPatterns.DataClass
+import groovy_parallel_patterns.DataClass
 import GPP_Demos.goldbach_Book.data.PrimeListSeq
 
 //usage runDemo goldbach_Book/scripts SeqGoldbach resultsFile scale

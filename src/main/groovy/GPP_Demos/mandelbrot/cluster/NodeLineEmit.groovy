@@ -1,11 +1,11 @@
 package GPP_Demos.mandelbrot.cluster
 
 import GPP_Demos.mandelbrot.data.MandelbrotLine as ml
-import groovyParallelPatterns.*
-import groovyParallelPatterns.cluster.*
-import groovyParallelPatterns.cluster.connectors.*
-import groovyParallelPatterns.terminals.Emit
-import groovyJCSP.*
+import groovy_parallel_patterns.*
+import groovy_parallel_patterns.cluster.*
+import groovy_parallel_patterns.cluster.connectors.*
+import groovy_parallel_patterns.terminals.Emit
+import groovy_jcsp.*
 import jcsp.lang.*
 
 class NodeLineEmit implements NodeInterface {

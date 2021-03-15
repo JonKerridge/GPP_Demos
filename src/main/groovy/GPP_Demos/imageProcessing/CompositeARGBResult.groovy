@@ -4,7 +4,7 @@ import groovy.transform.CompileStatic
 import java.awt.image.BufferedImage
 import javax.imageio.ImageIO
 
-import groovyParallelPatterns.DataClassInterface as constants
+import groovy_parallel_patterns.DataClassInterface as constants
 
 @CompileStatic
 class CompositeARGBResult {

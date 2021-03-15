@@ -1,6 +1,6 @@
 package GPP_Demos.mceSort
 
-import groovyParallelPatterns.DataClass
+import groovy_parallel_patterns.DataClass
 
 class MCEsortResult extends DataClass{
   static String init = "init"

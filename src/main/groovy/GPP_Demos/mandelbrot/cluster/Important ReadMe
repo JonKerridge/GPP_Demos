@@ -11,5 +11,5 @@ by Kerridge and Urquhart
 The cluaterBuilder version has no need of a serialize method and thus these methods have
 been commented out in this text.
 
-It is crucial that groovyParallelPatterns.1.0.9 onwards is used to compile programs using
+It is crucial that groovy_parallel_patterns.1.0.9 onwards is used to compile programs using
 the library.

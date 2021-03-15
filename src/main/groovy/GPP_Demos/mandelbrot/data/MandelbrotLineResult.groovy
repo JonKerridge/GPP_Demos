@@ -5,7 +5,7 @@ import java.util.List;
 import jcsp.awt.*
 
 
-class MandelbrotLineResult extends groovyParallelPatterns.DataClass {
+class MandelbrotLineResult extends groovy_parallel_patterns.DataClass {
 
   static int width
   static int height
